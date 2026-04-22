@@ -174,7 +174,7 @@ export default function Hero() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-4 py-3 rounded-xl text-sm outline-none transition-all"
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none transition-all sm:min-h-0 sm:h-auto sm:py-3 sm:text-sm"
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
@@ -193,7 +193,7 @@ export default function Hero() {
             <button
               type="submit"
               disabled={loading}
-              className="glow-btn px-6 py-3 rounded-xl text-sm font-semibold text-white cursor-pointer"
+              className="glow-btn w-full min-h-14 px-6 text-base font-semibold text-white cursor-pointer rounded-xl sm:min-h-0 sm:w-auto sm:py-3 sm:text-sm"
             >
               <span>
                 {loading ? "Joining..." : "Get early access →"}

@@ -105,12 +105,12 @@ function WarmHero() {
             <input
               type="email" required placeholder="your@email.com" value={email}
               onChange={e => setEmail(e.target.value)}
-              className="flex-1 px-4 py-3.5 rounded-xl text-sm outline-none"
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:min-h-0 sm:h-auto sm:py-3.5 sm:text-sm"
               style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.15)", color: "#1a1208" }}
               onFocus={e => (e.currentTarget.style.borderColor = "#e8572a")}
               onBlur={e => (e.currentTarget.style.borderColor = "rgba(120,53,15,0.15)")}
             />
-            <button type="submit" className="px-6 py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer transition-all"
+            <button type="submit" className="w-full min-h-14 px-6 text-base font-bold text-white cursor-pointer rounded-xl transition-all sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm"
               style={{ background: "#e8572a", boxShadow: "0 4px 20px rgba(232,87,42,0.35)" }}
               onMouseEnter={e => (e.currentTarget.style.background = "#d4450f")}
               onMouseLeave={e => (e.currentTarget.style.background = "#e8572a")}
@@ -410,12 +410,12 @@ function WarmWaitlist() {
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
             <input type="email" required placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
-              className="flex-1 px-4 py-3.5 rounded-xl text-sm outline-none"
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:min-h-0 sm:h-auto sm:py-3.5 sm:text-sm"
               style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", color: "white" }}
               onFocus={e => (e.currentTarget.style.borderColor = "#e8572a")}
               onBlur={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)")}
             />
-            <button type="submit" className="px-6 py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>
+            <button type="submit" className="w-full min-h-14 px-6 text-base font-bold text-white cursor-pointer rounded-xl sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm" style={{ background: "#e8572a" }}>
               Get early access →
             </button>
           </form>

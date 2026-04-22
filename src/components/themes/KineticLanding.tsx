@@ -150,11 +150,11 @@ function KineticHero() {
               onChange={e => setEmail(e.target.value)}
               onFocus={e => { trackEvent("hero_email_focused"); e.currentTarget.style.borderColor = K.hot; }}
               onBlur={e => (e.currentTarget.style.borderColor = K.dim)}
-              className="flex-1 px-4 rounded-xl text-sm outline-none"
-              style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text, height: "52px" }}
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:h-[52px] sm:min-h-0 sm:text-sm"
+              style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text }}
             />
-            <button type="submit" className="px-6 rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-wider transition-all"
-              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, height: "52px", flexShrink: 0 }}
+            <button type="submit" className="w-full min-h-14 px-6 rounded-xl text-base font-black text-white cursor-pointer uppercase tracking-wider transition-all sm:h-[52px] sm:min-h-0 sm:w-auto sm:text-sm"
+              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, flexShrink: 0 }}
               onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(255,0,110,0.65)`)}
               onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(255,0,110,0.4)`)}>
               GO →
@@ -713,11 +713,11 @@ function KineticWaitlist() {
             <input type="email" required placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
               onFocus={e => { trackEvent("waitlist_email_focused"); e.currentTarget.style.borderColor = K.hot; }}
               onBlur={e => (e.currentTarget.style.borderColor = K.dim)}
-              className="flex-1 px-4 rounded-xl text-sm outline-none"
-              style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text, height: "52px" }}
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:h-[52px] sm:min-h-0 sm:text-sm"
+              style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text }}
             />
-            <button type="submit" className="px-6 rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-widest transition-all"
-              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, height: "52px", flexShrink: 0 }}
+            <button type="submit" className="w-full min-h-14 px-6 rounded-xl text-base font-black text-white cursor-pointer uppercase tracking-widest transition-all sm:h-[52px] sm:min-h-0 sm:w-auto sm:text-sm"
+              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, flexShrink: 0 }}
               onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(255,0,110,0.65)`)}
               onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(255,0,110,0.4)`)}>
               GO →

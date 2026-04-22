@@ -117,7 +117,7 @@ export default function Waitlist() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-4 py-3.5 rounded-xl text-sm outline-none"
+              className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:min-h-0 sm:h-auto sm:py-3.5 sm:text-sm"
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
@@ -134,7 +134,7 @@ export default function Waitlist() {
             <button
               type="submit"
               disabled={loading}
-              className="glow-btn px-6 py-3.5 rounded-xl text-sm font-semibold text-white cursor-pointer whitespace-nowrap"
+              className="glow-btn w-full min-h-14 px-6 text-base font-semibold text-white cursor-pointer rounded-xl whitespace-nowrap sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm"
             >
               <span>{loading ? "Joining..." : "Get early access →"}</span>
             </button>
