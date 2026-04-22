@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "StartEngine — Stop Overthinking. Start Moving.";
+export const alt = "Startify — Stop Overthinking. Start Moving.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,7 +75,7 @@ export default function OgImage() {
               letterSpacing: "-0.5px",
             }}
           >
-            StartEngine
+            Startify
           </span>
         </div>
 

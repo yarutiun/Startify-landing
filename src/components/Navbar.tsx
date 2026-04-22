@@ -43,7 +43,7 @@ export default function Navbar() {
             </svg>
           </div>
           <span className="font-semibold text-white text-sm tracking-tight">
-            StartEngine
+            Startify
           </span>
         </div>
 

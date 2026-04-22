@@ -124,7 +124,7 @@ export default function Features() {
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
             Remove friction. Reduce thinking. Increase action frequency.
-            Everything in StartEngine serves this goal.
+            Everything in Startify serves this goal.
           </p>
         </div>
 

@@ -9,8 +9,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://startengine.app";
-const title = "StartEngine — Stop Overthinking. Start Moving.";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://startify.app";
+const title = "Startify — Stop Overthinking. Start Moving.";
 const description =
   "The AI execution companion that breaks any goal into one single action. No plans. No lists. Just the next step — right now. Built for developers, students, and anyone who struggles to start.";
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s | StartEngine",
+    template: "%s | Startify",
   },
   description,
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "start",
     "momentum",
   ],
-  authors: [{ name: "StartEngine" }],
-  creator: "StartEngine",
-  publisher: "StartEngine",
+  authors: [{ name: "Startify" }],
+  creator: "Startify",
+  publisher: "Startify",
   robots: {
     index: true,
     follow: true,
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     title,
     description,
-    siteName: "StartEngine",
+    siteName: "Startify",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "StartEngine — AI execution companion",
+        alt: "Startify — AI execution companion",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title,
     description,
     images: ["/og-image.png"],
-    creator: "@startengineapp",
+    creator: "@startifyapp",
   },
   alternates: {
     canonical: siteUrl,
@@ -103,7 +103,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "StartEngine",
+              name: "Startify",
               applicationCategory: "ProductivityApplication",
               description,
               url: siteUrl,

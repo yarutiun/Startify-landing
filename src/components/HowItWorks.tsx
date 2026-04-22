@@ -18,7 +18,7 @@ const steps = [
   {
     number: "02",
     title: "Get the ONE next step",
-    desc: "No plan. No breakdown. StartEngine gives you exactly one action — the smallest physically possible thing to do right now.",
+    desc: "No plan. No breakdown. Startify gives you exactly one action — the smallest physically possible thing to do right now.",
     detail: "Step 1: Open your laptop",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -99,7 +99,7 @@ export default function HowItWorks() {
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
             No setup. No onboarding. No configuration. Just type your goal and
-            StartEngine handles the rest.
+            Startify handles the rest.
           </p>
         </div>
 

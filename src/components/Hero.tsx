@@ -126,7 +126,7 @@ export default function Hero() {
             transition: "opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s",
           }}
         >
-          StartEngine breaks any goal into{" "}
+          Startify breaks any goal into{" "}
           <span className="text-white font-medium">one single action</span>. Not a plan.
           Not a list. Just the next step — right now.
         </p>
@@ -317,7 +317,7 @@ function HeroStepCard() {
             </svg>
           </div>
           <span className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
-            StartEngine
+            Startify
           </span>
           <div className="ml-auto flex gap-1">
             {steps.map((_, i) => (

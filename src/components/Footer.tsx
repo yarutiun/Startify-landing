@@ -25,7 +25,7 @@ export default function Footer() {
                 <path d="M7 1L13 7L7 13M1 7H13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-semibold text-white text-sm">StartEngine</span>
+            <span className="font-semibold text-white text-sm">Startify</span>
           </div>
 
           {/* Links */}
@@ -49,7 +49,7 @@ export default function Footer() {
               Terms
             </button>
             <a
-              href="mailto:hello@startengine.app"
+              href="mailto:hello@startify.app"
               onClick={() => trackEvent("footer_link_clicked", { link: "contact" })}
               className="transition-colors"
               style={{ color: "inherit" }}
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            © {year} StartEngine. All rights reserved.
+            © {year} Startify. All rights reserved.
           </p>
         </div>
 

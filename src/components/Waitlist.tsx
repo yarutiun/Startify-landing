@@ -102,7 +102,7 @@ export default function Waitlist() {
           className="text-lg mb-10 max-w-lg mx-auto"
           style={{ color: "var(--text-secondary)" }}
         >
-          Join the waitlist. Be first to try StartEngine when we launch.
+          Join the waitlist. Be first to try Startify when we launch.
           No spam — just one email when it&rsquo;s ready.
         </p>
 
@@ -161,7 +161,7 @@ export default function Waitlist() {
                 You&rsquo;re on the list!
               </p>
               <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                We&rsquo;ll email you when StartEngine is ready.
+                We&rsquo;ll email you when Startify is ready.
               </p>
             </div>
           </div>
