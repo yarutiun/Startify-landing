@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Amplitude } from "@/amplitude";
 import Analytics from "@/components/Analytics";
 
 const inter = Inter({
@@ -113,6 +114,7 @@ export default function RootLayout({
           }}
         />
       </head>
+      <Amplitude />
       <body>
         <Analytics />
         {children}
