@@ -20,3 +20,4 @@ export function identifyUser(email: string) {
   identify(identifyEvent);
   setUserId(email);
 }
+
