@@ -26,7 +26,7 @@ export default function Navbar() {
           : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         borderBottom: scrolled
-          ? "1px solid rgba(139,92,246,0.12)"
+          ? "1px solid rgba(99,102,241,0.12)"
           : "1px solid transparent",
       }}
     >
@@ -35,7 +35,7 @@ export default function Navbar() {
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center"
             style={{
-              background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+              background: "linear-gradient(135deg, #6366F1, #4f46e5)",
             }}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -76,17 +76,17 @@ export default function Navbar() {
           onClick={handleCTA}
           className="text-sm font-medium px-4 py-2 rounded-lg cursor-pointer transition-all duration-200"
           style={{
-            background: "rgba(139,92,246,0.15)",
-            border: "1px solid rgba(139,92,246,0.3)",
-            color: "#a78bfa",
+            background: "rgba(99,102,241,0.15)",
+            border: "1px solid rgba(99,102,241,0.3)",
+            color: "#A78BFA",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139,92,246,0.25)";
-            e.currentTarget.style.borderColor = "rgba(139,92,246,0.5)";
+            e.currentTarget.style.background = "rgba(99,102,241,0.25)";
+            e.currentTarget.style.borderColor = "rgba(99,102,241,0.5)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139,92,246,0.15)";
-            e.currentTarget.style.borderColor = "rgba(139,92,246,0.3)";
+            e.currentTarget.style.background = "rgba(99,102,241,0.15)";
+            e.currentTarget.style.borderColor = "rgba(99,102,241,0.3)";
           }}
         >
           Join waitlist

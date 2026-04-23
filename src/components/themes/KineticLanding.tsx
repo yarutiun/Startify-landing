@@ -8,10 +8,10 @@ const K = {
   bg:      "#05010f",
   surface: "#0c0520",
   card:    "#120830",
-  hot:     "#ff006e",
-  purple:  "#8338ec",
-  orange:  "#fb5607",
-  neon:    "#00f5d4",
+  hot:     "#6366F1",
+  purple:  "#A78BFA",
+  orange:  "#84CC16",
+  neon:    "#84CC16",
   text:    "#ffffff",
   muted:   "rgba(255,255,255,0.45)",
   dim:     "rgba(255,255,255,0.12)",
@@ -44,7 +44,7 @@ function KineticStyles() {
     <style>{`
       @keyframes k-pulse  { 0%,100%{opacity:.6} 50%{opacity:1} }
       @keyframes k-orb    { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-30px) scale(1.05)} 66%{transform:translate(-20px,20px) scale(0.95)} }
-      @keyframes k-glow   { 0%,100%{box-shadow:0 0 20px rgba(255,0,110,.3)} 50%{box-shadow:0 0 50px rgba(255,0,110,.6),0 0 90px rgba(131,56,236,.3)} }
+      @keyframes k-glow   { 0%,100%{box-shadow:0 0 20px rgba(99,102,241,.35)} 50%{box-shadow:0 0 50px rgba(167,139,250,.45),0 0 90px rgba(132,204,22,.18)} }
       @keyframes k-scan   { from{transform:translateY(-100%)} to{transform:translateY(200vh)} }
       @keyframes k-ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
       @keyframes k-step-in { from{opacity:0;transform:translateX(10px)} to{opacity:1;transform:none} }
@@ -75,12 +75,12 @@ function KineticNav() {
       style={{
         background: scrolled ? "rgba(5,1,15,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled ? `1px solid rgba(255,0,110,0.15)` : "1px solid transparent",
+        borderBottom: scrolled ? `1px solid rgba(99,102,241,0.15)` : "1px solid transparent",
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="relative w-8 h-8 flex items-center justify-center flex-shrink-0 rounded-full" style={{ background: GRAD, boxShadow: `0 0 18px rgba(255,0,110,0.45)`, animation: "k-glow 3s infinite" }}>
+          <div className="relative w-8 h-8 flex items-center justify-center flex-shrink-0 rounded-full" style={{ background: GRAD, boxShadow: `0 0 18px rgba(99,102,241,0.45)`, animation: "k-glow 3s infinite" }}>
             <span className="text-sm font-black text-white">⚡</span>
           </div>
           <span className="font-black tracking-tight" style={{ fontSize: "17px", background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Startify</span>
@@ -88,9 +88,9 @@ function KineticNav() {
         <button
           onClick={() => { trackEvent("nav_cta_clicked", { theme: "kinetic" }); document.getElementById("k-waitlist")?.scrollIntoView({ behavior: "smooth" }); }}
           className="text-xs font-black px-5 rounded-full cursor-pointer transition-all uppercase tracking-widest"
-          style={{ background: GRAD, color: "white", boxShadow: `0 0 20px rgba(255,0,110,0.35)`, minHeight: "44px" }}
-          onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(255,0,110,0.6)`)}
-          onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(255,0,110,0.35)`)}
+          style={{ background: GRAD, color: "white", boxShadow: `0 0 20px rgba(99,102,241,0.35)`, minHeight: "44px" }}
+          onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(99,102,241,0.6)`)}
+          onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(99,102,241,0.35)`)}
         >
           Join
         </button>
@@ -117,9 +117,9 @@ function KineticHero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: K.bg }}>
-      <div className="absolute pointer-events-none" style={{ top: "15%", left: "10%", width: "min(600px,80vw)", height: "min(600px,80vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(255,0,110,0.15),transparent 65%)`, animation: "k-orb 8s ease-in-out infinite" }} />
-      <div className="absolute pointer-events-none" style={{ bottom: "10%", right: "5%", width: "min(500px,70vw)", height: "min(500px,70vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(131,56,236,0.12),transparent 65%)`, animation: "k-orb 11s ease-in-out infinite reverse" }} />
-      <div className="absolute pointer-events-none" style={{ top: "50%", left: "55%", width: "min(300px,50vw)", height: "min(300px,50vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(0,245,212,0.08),transparent 65%)`, animation: "k-orb 14s ease-in-out infinite" }} />
+      <div className="absolute pointer-events-none" style={{ top: "15%", left: "10%", width: "min(600px,80vw)", height: "min(600px,80vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(99,102,241,0.15),transparent 65%)`, animation: "k-orb 8s ease-in-out infinite" }} />
+      <div className="absolute pointer-events-none" style={{ bottom: "10%", right: "5%", width: "min(500px,70vw)", height: "min(500px,70vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(167,139,250,0.12),transparent 65%)`, animation: "k-orb 11s ease-in-out infinite reverse" }} />
+      <div className="absolute pointer-events-none" style={{ top: "50%", left: "55%", width: "min(300px,50vw)", height: "min(300px,50vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(132,204,22,0.08),transparent 65%)`, animation: "k-orb 14s ease-in-out infinite" }} />
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10">
         <div className="absolute w-full h-1" style={{ background: `linear-gradient(90deg,transparent,${K.hot},transparent)`, animation: "k-scan 4s linear infinite" }} />
       </div>
@@ -128,7 +128,7 @@ function KineticHero() {
         className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-16 text-center"
         style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(20px)", transition: "opacity .7s ease, transform .7s ease" }}
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-8" style={{ background: `rgba(255,0,110,0.1)`, border: `1px solid rgba(255,0,110,0.3)`, color: K.hot }}>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-8" style={{ background: `rgba(99,102,241,0.1)`, border: `1px solid rgba(99,102,241,0.3)`, color: K.hot }}>
           <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: K.hot, animation: "k-pulse 1.5s infinite" }} />
           Early access · ADHD · procrastination friendly
         </div>
@@ -154,9 +154,9 @@ function KineticHero() {
               style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text }}
             />
             <button type="submit" className="w-full min-h-14 px-6 rounded-xl text-base font-black text-white cursor-pointer uppercase tracking-wider transition-all sm:h-[52px] sm:min-h-0 sm:w-auto sm:text-sm"
-              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, flexShrink: 0 }}
-              onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(255,0,110,0.65)`)}
-              onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(255,0,110,0.4)`)}>
+              style={{ background: GRAD, boxShadow: `0 0 30px rgba(99,102,241,0.4)`, flexShrink: 0 }}
+              onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(99,102,241,0.65)`)}
+              onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(99,102,241,0.4)`)}>
               GO →
             </button>
           </form>
@@ -245,7 +245,7 @@ function KineticStepCard() {
   };
 
   return (
-    <div className="relative w-full text-left rounded-2xl overflow-hidden" style={{ maxWidth: "min(380px,100%)", background: K.card, border: `1px solid rgba(255,0,110,0.2)`, boxShadow: `0 0 60px rgba(255,0,110,0.08),0 30px 60px rgba(0,0,0,0.5)`, animation: "k-glow 4s infinite" }}>
+    <div className="relative w-full text-left rounded-2xl overflow-hidden" style={{ maxWidth: "min(380px,100%)", background: K.card, border: `1px solid rgba(99,102,241,0.2)`, boxShadow: `0 0 60px rgba(99,102,241,0.08),0 30px 60px rgba(0,0,0,0.5)`, animation: "k-glow 4s infinite" }}>
       <div className="h-0.5 w-full" style={{ background: GRAD }} />
       <div className="px-4 pt-3 pb-2 flex items-center justify-between" style={{ borderBottom: `1px solid ${K.dim}` }}>
         <span className="text-xs font-black uppercase tracking-wider" style={{ color: K.hot }}>Startify</span>
@@ -270,7 +270,7 @@ function KineticStepCard() {
             {/* Step label + time badge */}
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-black uppercase tracking-widest" style={{ color: K.hot }}>Step {step + 1}</span>
-              <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-black" style={{ background: `rgba(0,245,212,0.08)`, border: `1px solid rgba(0,245,212,0.2)`, color: K.neon }}>
+              <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-black" style={{ background: `rgba(132,204,22,0.08)`, border: `1px solid rgba(132,204,22,0.2)`, color: K.neon }}>
                 ⏱ {HERO_STEPS[step].time}
               </span>
             </div>
@@ -284,20 +284,20 @@ function KineticStepCard() {
               </p>
             )}
             {stuck && (
-              <div className="mb-3 rounded-xl p-3.5" key={`stuck-${step}`} style={{ background: `rgba(131,56,236,0.08)`, border: `1px solid rgba(131,56,236,0.25)`, animation: "k-stuck-in .25s ease" }}>
+              <div className="mb-3 rounded-xl p-3.5" key={`stuck-${step}`} style={{ background: `rgba(167,139,250,0.08)`, border: `1px solid rgba(167,139,250,0.25)`, animation: "k-stuck-in .25s ease" }}>
                 <p className="text-xs font-black uppercase tracking-widest mb-1.5" style={{ color: K.purple }}>How to unblock</p>
                 <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{HERO_STEPS[step].stuck}</p>
               </div>
             )}
             <div className="flex gap-2">
               <button onClick={handleDone} className="flex-1 rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-wider transition-all"
-                style={{ background: GRAD, boxShadow: `0 0 20px rgba(255,0,110,0.3)`, minHeight: "48px" }}
-                onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(255,0,110,0.5)`)}
-                onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(255,0,110,0.3)`)}>
+                style={{ background: GRAD, boxShadow: `0 0 20px rgba(99,102,241,0.3)`, minHeight: "48px" }}
+                onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(99,102,241,0.5)`)}
+                onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(99,102,241,0.3)`)}>
                 DONE ✓
               </button>
               <button onClick={() => setStuck(s => !s)} className="flex-1 rounded-xl text-sm font-bold cursor-pointer uppercase tracking-wider transition-all"
-                style={{ background: stuck ? `rgba(131,56,236,0.15)` : K.dim, color: stuck ? K.purple : K.muted, border: `1px solid ${stuck ? "rgba(131,56,236,0.35)" : "rgba(255,255,255,0.08)"}`, minHeight: "48px" }}>
+                style={{ background: stuck ? `rgba(167,139,250,0.15)` : K.dim, color: stuck ? K.purple : K.muted, border: `1px solid ${stuck ? "rgba(167,139,250,0.35)" : "rgba(255,255,255,0.08)"}`, minHeight: "48px" }}>
                 {stuck ? "Got it" : "Stuck?"}
               </button>
             </div>
@@ -311,16 +311,16 @@ function KineticStepCard() {
 /* ── Problem ─────────────────────────────────────────────────────────────── */
 function KineticProblem() {
   const cards = [
-    { n: "01", title: "The hyperfocus rabbit hole", body: "You “just need to research” until midnight. Twelve tabs, three podcasts, zero progress. Classic ADHD time warp—not laziness.", color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
-    { n: "02", title: "Planning instead of doing", body: "The Notion board is gorgeous. The calendar color-coding slaps. Your executive function still won’t hand you the starter lever.",         color: K.purple, shadow: "rgba(131,56,236,0.2)" },
-    { n: "03", title: "Shame-fueled procrastination",   body: "Every “I’ll start tomorrow” adds weight. The task feels bigger, you feel worse, and the freeze gets louder. Sound familiar?",  color: K.orange, shadow: "rgba(251,86,7,0.2)" },
+    { n: "01", title: "The hyperfocus rabbit hole", body: "You “just need to research” until midnight. Twelve tabs, three podcasts, zero progress. Classic ADHD time warp—not laziness.", color: K.hot,    shadow: "rgba(99,102,241,0.2)" },
+    { n: "02", title: "Planning instead of doing", body: "The Notion board is gorgeous. The calendar color-coding slaps. Your executive function still won’t hand you the starter lever.",         color: K.purple, shadow: "rgba(167,139,250,0.2)" },
+    { n: "03", title: "Shame-fueled procrastination",   body: "Every “I’ll start tomorrow” adds weight. The task feels bigger, you feel worse, and the freeze gets louder. Sound familiar?",  color: K.orange, shadow: "rgba(132,204,22,0.2)" },
   ];
 
   return (
     <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" style={{ background: K.surface, borderTop: `1px solid ${K.dim}` }}>
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-10 sm:mb-12">
-          <div className="inline-block text-xs font-black uppercase tracking-widest mb-4 px-3 py-1 rounded" style={{ background: `rgba(255,0,110,0.1)`, color: K.hot }}>Task paralysis is real</div>
+          <div className="inline-block text-xs font-black uppercase tracking-widest mb-4 px-3 py-1 rounded" style={{ background: `rgba(99,102,241,0.1)`, color: K.hot }}>Task paralysis is real</div>
           <h2 style={{ fontSize: "clamp(30px,5vw,60px)", fontWeight: 900, letterSpacing: "-0.04em", lineHeight: 1.05, color: K.text, marginBottom: "16px" }}>
             YOU ARE NOT<br />
             <span style={{ background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>&ldquo;JUST LAZY.&rdquo;</span><br />
@@ -332,7 +332,7 @@ function KineticProblem() {
           {cards.map((p, i) => (
             <div key={i} className="k-hover-card relative rounded-2xl p-6 overflow-hidden"
               style={{ background: K.card, border: `1px solid rgba(255,255,255,0.07)` }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = `rgba(${p.color === K.hot ? "255,0,110" : p.color === K.purple ? "131,56,236" : "251,86,7"},0.35)`; (e.currentTarget as HTMLDivElement).style.boxShadow = `0 20px 50px ${p.shadow}`; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = `rgba(${p.color === K.hot ? "99,102,241" : p.color === K.purple ? "167,139,250" : "132,204,22"},0.35)`; (e.currentTarget as HTMLDivElement).style.boxShadow = `0 20px 50px ${p.shadow}`; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
             >
               <div className="absolute top-0 left-0 w-full h-0.5" style={{ background: p.color }} />
@@ -350,9 +350,9 @@ function KineticProblem() {
 /* ── How it works ─────────────────────────────────────────────────────────── */
 function KineticHowItWorks() {
   const steps = [
-    { n: "01", icon: "💬", title: "Brain-dump the stuck",   desc: "Messy sentences welcome. Say what you’re avoiding—taxes, inbox, laundry, essay, breakup text. Shame stays outside the box.",       color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
-    { n: "02", icon: "⚡", title: "Get ONE body-sized step",     desc: "No roadmap. One action a tired, overstimulated human can finish without negotiating with themselves.",          color: K.purple, shadow: "rgba(131,56,236,0.2)" },
-    { n: "03", icon: "🔁", title: "Tap Done or Stuck", desc: "Done → dopamine hit + next micro-step. Stuck → it shrinks again until it feels possible for ADHD timing.",        color: K.neon,   shadow: "rgba(0,245,212,0.15)" },
+    { n: "01", icon: "💬", title: "Brain-dump the stuck",   desc: "Messy sentences welcome. Say what you’re avoiding—taxes, inbox, laundry, essay, breakup text. Shame stays outside the box.",       color: K.hot,    shadow: "rgba(99,102,241,0.2)" },
+    { n: "02", icon: "⚡", title: "Get ONE body-sized step",     desc: "No roadmap. One action a tired, overstimulated human can finish without negotiating with themselves.",          color: K.purple, shadow: "rgba(167,139,250,0.2)" },
+    { n: "03", icon: "🔁", title: "Tap Done or Stuck", desc: "Done → dopamine hit + next micro-step. Stuck → it shrinks again until it feels possible for ADHD timing.",        color: K.neon,   shadow: "rgba(132,204,22,0.15)" },
   ];
 
   return (
@@ -368,7 +368,7 @@ function KineticHowItWorks() {
           {steps.map((s, i) => (
             <div key={i} className="k-hover-card rounded-2xl p-6"
               style={{ background: K.card, border: `1px solid rgba(255,255,255,0.07)` }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = `rgba(${s.color === K.hot ? "255,0,110" : s.color === K.purple ? "131,56,236" : "0,245,212"},0.35)`; (e.currentTarget as HTMLDivElement).style.boxShadow = `0 20px 50px ${s.shadow}`; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = `rgba(${s.color === K.hot ? "99,102,241" : s.color === K.purple ? "167,139,250" : "132,204,22"},0.35)`; (e.currentTarget as HTMLDivElement).style.boxShadow = `0 20px 50px ${s.shadow}`; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -478,7 +478,7 @@ function KineticDemo() {
         <div className="flex flex-col lg:grid lg:grid-cols-5 gap-5 sm:gap-6 max-w-4xl mx-auto">
           {/* App window */}
           <div className="w-full lg:col-span-3 order-1">
-            <div className="rounded-2xl overflow-hidden" style={{ background: K.card, border: `1px solid rgba(255,0,110,0.2)`, boxShadow: `0 0 60px rgba(131,56,236,0.1)` }}>
+            <div className="rounded-2xl overflow-hidden" style={{ background: K.card, border: `1px solid rgba(99,102,241,0.2)`, boxShadow: `0 0 60px rgba(167,139,250,0.1)` }}>
               <div className="h-0.5" style={{ background: GRAD }} />
               <div className="flex items-center gap-2 px-4 py-3" style={{ borderBottom: `1px solid ${K.dim}` }}>
                 <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: "#ff5f57" }} />
@@ -494,7 +494,7 @@ function KineticDemo() {
                       &ldquo;I’ve been stuck on this forever—ADHD freeze + procrastination guilt loop&rdquo;
                     </div>
                     <button onClick={() => setStarted(true)} className="w-full rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-widest"
-                      style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.35)`, minHeight: "52px" }}>
+                      style={{ background: GRAD, boxShadow: `0 0 30px rgba(99,102,241,0.35)`, minHeight: "52px" }}>
                       IGNITE →
                     </button>
                   </div>
@@ -503,8 +503,8 @@ function KineticDemo() {
                     <div className="text-4xl mb-3">🏆</div>
                     <p className="font-black text-white text-lg mb-3 uppercase tracking-tight">Mission Complete!</p>
                     {/* Time highlight */}
-                    <div className="rounded-xl px-4 py-3 mb-3" style={{ background: `rgba(0,245,212,0.06)`, border: `1px solid rgba(0,245,212,0.18)` }}>
-                      <p className="text-xs uppercase tracking-widest font-black mb-1" style={{ color: "rgba(0,245,212,0.5)" }}>Total time</p>
+                    <div className="rounded-xl px-4 py-3 mb-3" style={{ background: `rgba(132,204,22,0.06)`, border: `1px solid rgba(132,204,22,0.18)` }}>
+                      <p className="text-xs uppercase tracking-widest font-black mb-1" style={{ color: "rgba(132,204,22,0.5)" }}>Total time</p>
                       <p className="text-2xl font-black" style={{ color: K.neon }}>{formatTime(totalSec)}</p>
                       <p className="text-xs mt-1" style={{ color: K.muted }}>Proof you can interrupt paralysis without a lecture.</p>
                     </div>
@@ -525,14 +525,14 @@ function KineticDemo() {
                       <div className="h-full rounded-full transition-all duration-500" style={{ width: `${Math.min(100, xp / 3)}%`, background: GRAD }} />
                     </div>
                     {toast && (
-                      <div className="mb-3 px-3 py-2 rounded-lg text-xs font-black text-center uppercase tracking-wider" style={{ background: `rgba(255,0,110,0.1)`, border: `1px solid rgba(255,0,110,0.25)`, color: K.hot }}>
+                      <div className="mb-3 px-3 py-2 rounded-lg text-xs font-black text-center uppercase tracking-wider" style={{ background: `rgba(99,102,241,0.1)`, border: `1px solid rgba(99,102,241,0.25)`, color: K.hot }}>
                         {toast}
                       </div>
                     )}
                     {/* Step label + time badge */}
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-black uppercase tracking-widest" style={{ color: K.hot }}>STEP {step + 1} / {DEMO_STEPS.length}</span>
-                      <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-black" style={{ background: `rgba(0,245,212,0.08)`, border: `1px solid rgba(0,245,212,0.2)`, color: K.neon }}>
+                      <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-black" style={{ background: `rgba(132,204,22,0.08)`, border: `1px solid rgba(132,204,22,0.2)`, color: K.neon }}>
                         ⏱ {DEMO_STEPS[step].time}
                       </span>
                     </div>
@@ -550,7 +550,7 @@ function KineticDemo() {
 
                     {/* Stuck panel */}
                     {stuck && (
-                      <div key={`stuck-${step}`} className="mb-3 rounded-xl p-3.5" style={{ background: `rgba(131,56,236,0.08)`, border: `1px solid rgba(131,56,236,0.25)`, animation: "k-stuck-in .25s ease" }}>
+                      <div key={`stuck-${step}`} className="mb-3 rounded-xl p-3.5" style={{ background: `rgba(167,139,250,0.08)`, border: `1px solid rgba(167,139,250,0.25)`, animation: "k-stuck-in .25s ease" }}>
                         <p className="text-xs font-black uppercase tracking-widest mb-1.5" style={{ color: K.purple }}>How to unblock</p>
                         <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.72)" }}>{DEMO_STEPS[step].stuck}</p>
                       </div>
@@ -558,13 +558,13 @@ function KineticDemo() {
 
                     <div className="flex gap-2">
                       <button onClick={handleDone} className="flex-1 rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-wider transition-all"
-                        style={{ background: GRAD, boxShadow: `0 0 20px rgba(255,0,110,0.3)`, minHeight: "48px" }}
-                        onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(255,0,110,0.5)`)}
-                        onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(255,0,110,0.3)`)}>
+                        style={{ background: GRAD, boxShadow: `0 0 20px rgba(99,102,241,0.3)`, minHeight: "48px" }}
+                        onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px rgba(99,102,241,0.5)`)}
+                        onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px rgba(99,102,241,0.3)`)}>
                         DONE +{DEMO_STEPS[step].xp}XP
                       </button>
                       <button onClick={handleStuck} className="flex-1 rounded-xl text-sm font-bold cursor-pointer uppercase tracking-wider transition-all"
-                        style={{ background: stuck ? `rgba(131,56,236,0.15)` : K.dim, color: stuck ? K.purple : K.muted, border: `1px solid ${stuck ? "rgba(131,56,236,0.35)" : "rgba(255,255,255,0.08)"}`, minHeight: "48px" }}>
+                        style={{ background: stuck ? `rgba(167,139,250,0.15)` : K.dim, color: stuck ? K.purple : K.muted, border: `1px solid ${stuck ? "rgba(167,139,250,0.35)" : "rgba(255,255,255,0.08)"}`, minHeight: "48px" }}>
                         {stuck ? "Got it" : "Stuck?"}
                       </button>
                     </div>
@@ -577,8 +577,8 @@ function KineticDemo() {
           {/* Stats panel */}
           <div className="w-full lg:col-span-2 order-2 flex flex-row lg:flex-col gap-3">
             {/* Time invested */}
-            <div className="rounded-2xl p-4" style={{ background: K.card, border: `1px solid rgba(0,245,212,0.15)` }}>
-              <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: "rgba(0,245,212,0.5)" }}>Time invested</p>
+            <div className="rounded-2xl p-4" style={{ background: K.card, border: `1px solid rgba(132,204,22,0.15)` }}>
+              <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: "rgba(132,204,22,0.5)" }}>Time invested</p>
               <p className="text-xl font-black" style={{ color: totalSec > 0 ? K.neon : K.dim }}>
                 {totalSec > 0 ? formatTime(totalSec) : "0 sec"}
               </p>
@@ -595,7 +595,7 @@ function KineticDemo() {
               <div className="flex gap-1.5">
                 {[...Array(5)].map((_, i) => (
                   <div key={i} className="flex-1 rounded-lg flex items-center justify-center text-sm transition-all duration-300"
-                    style={{ height: "32px", background: i < streak ? `rgba(255,0,110,0.2)` : K.dim, border: `1px solid ${i < streak ? "rgba(255,0,110,0.4)" : "rgba(255,255,255,0.06)"}` }}>
+                    style={{ height: "32px", background: i < streak ? `rgba(99,102,241,0.2)` : K.dim, border: `1px solid ${i < streak ? "rgba(99,102,241,0.4)" : "rgba(255,255,255,0.06)"}` }}>
                     {i < streak ? "🔥" : ""}
                   </div>
                 ))}
@@ -625,7 +625,7 @@ function KineticGamification() {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
-            <div className="text-xs font-black uppercase tracking-widest mb-4 px-3 py-1.5 inline-block rounded" style={{ background: `rgba(0,245,212,0.08)`, color: K.neon }}>
+            <div className="text-xs font-black uppercase tracking-widest mb-4 px-3 py-1.5 inline-block rounded" style={{ background: `rgba(132,204,22,0.08)`, color: K.neon }}>
               Built for dopamine-seeking brains
             </div>
             <h2 style={{ fontSize: "clamp(30px,5vw,56px)", fontWeight: 900, letterSpacing: "-0.04em", color: K.text, marginBottom: "16px", lineHeight: 1.0 }}>
@@ -652,7 +652,7 @@ function KineticGamification() {
           </div>
 
           <div>
-            <div className="rounded-2xl p-5 sm:p-6" style={{ background: K.card, border: `1px solid rgba(0,245,212,0.12)` }}>
+            <div className="rounded-2xl p-5 sm:p-6" style={{ background: K.card, border: `1px solid rgba(132,204,22,0.12)` }}>
               <p className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: K.muted }}>The execution loop</p>
               <div className="flex flex-col gap-1">
                 {[
@@ -665,7 +665,7 @@ function KineticGamification() {
                 ].map((s, i) => (
                   <div key={i}>
                     <div className="flex items-center gap-3 px-4 py-2.5 rounded-xl"
-                      style={{ background: `rgba(${i === 5 ? "255,0,110" : "255,255,255"},0.04)`, border: `1px solid rgba(${i === 5 ? "255,0,110" : "255,255,255"},0.06)` }}>
+                      style={{ background: `rgba(${i === 5 ? "99,102,241" : "255,255,255"},0.04)`, border: `1px solid rgba(${i === 5 ? "99,102,241" : "255,255,255"},0.06)` }}>
                       <span className="text-lg w-6 text-center flex-shrink-0">{s.icon}</span>
                       <span className="text-sm font-bold" style={{ color: s.c }}>{s.text}</span>
                     </div>
@@ -673,9 +673,9 @@ function KineticGamification() {
                   </div>
                 ))}
                 <div className="flex items-center gap-2 mt-2">
-                  <div className="flex-1 h-px" style={{ background: `rgba(0,245,212,0.2)` }} />
+                  <div className="flex-1 h-px" style={{ background: `rgba(132,204,22,0.2)` }} />
                   <span className="text-xs font-bold" style={{ color: K.neon }}>keeps going</span>
-                  <div className="flex-1 h-px" style={{ background: `rgba(0,245,212,0.2)` }} />
+                  <div className="flex-1 h-px" style={{ background: `rgba(132,204,22,0.2)` }} />
                 </div>
               </div>
             </div>
@@ -701,7 +701,7 @@ function KineticWaitlist() {
 
   return (
     <section id="k-waitlist" className="relative py-24 sm:py-28 px-4 sm:px-6 text-center overflow-hidden" style={{ background: K.surface, borderTop: `1px solid ${K.dim}` }}>
-      <div className="absolute pointer-events-none" style={{ top: "10%", left: "50%", transform: "translateX(-50%)", width: "min(500px,100vw)", height: "min(500px,100vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(255,0,110,0.1),transparent 60%)`, animation: "k-orb 7s infinite" }} />
+      <div className="absolute pointer-events-none" style={{ top: "10%", left: "50%", transform: "translateX(-50%)", width: "min(500px,100vw)", height: "min(500px,100vw)", borderRadius: "50%", background: `radial-gradient(circle,rgba(99,102,241,0.1),transparent 60%)`, animation: "k-orb 7s infinite" }} />
       <div className="relative z-10 max-w-lg mx-auto">
         <h2 style={{ fontSize: "clamp(36px,7vw,80px)", fontWeight: 900, letterSpacing: "-0.05em", lineHeight: 0.9, marginBottom: "20px" }}>
           <span style={{ display: "block", color: K.text }}>READY</span>
@@ -717,9 +717,9 @@ function KineticWaitlist() {
               style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${K.dim}`, color: K.text }}
             />
             <button type="submit" className="w-full min-h-14 px-6 rounded-xl text-base font-black text-white cursor-pointer uppercase tracking-widest transition-all sm:h-[52px] sm:min-h-0 sm:w-auto sm:text-sm"
-              style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.4)`, flexShrink: 0 }}
-              onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(255,0,110,0.65)`)}
-              onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(255,0,110,0.4)`)}>
+              style={{ background: GRAD, boxShadow: `0 0 30px rgba(99,102,241,0.4)`, flexShrink: 0 }}
+              onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 50px rgba(99,102,241,0.65)`)}
+              onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 30px rgba(99,102,241,0.4)`)}>
               GO →
             </button>
           </form>
@@ -754,7 +754,7 @@ function KineticFooter() {
           style={{ background: "rgba(0,0,0,0.72)", backdropFilter: "blur(10px)" }}
           onClick={() => setShowContact(false)}>
           <div className="relative w-full rounded-2xl p-6 text-left"
-            style={{ maxWidth: "400px", background: K.card, border: `1px solid rgba(255,0,110,0.25)`, boxShadow: `0 0 80px rgba(255,0,110,0.12),0 40px 80px rgba(0,0,0,0.6)` }}
+            style={{ maxWidth: "400px", background: K.card, border: `1px solid rgba(99,102,241,0.25)`, boxShadow: `0 0 80px rgba(99,102,241,0.12),0 40px 80px rgba(0,0,0,0.6)` }}
             onClick={e => e.stopPropagation()}>
             <div className="absolute top-0 left-0 w-full h-0.5 rounded-t-2xl" style={{ background: GRAD }} />
             <button onClick={() => setShowContact(false)}
@@ -771,7 +771,7 @@ function KineticFooter() {
               <span className="flex-1 text-sm font-bold text-white select-all">{CONTACT_EMAIL}</span>
             </div>
             <button onClick={copyEmail} className="w-full rounded-xl text-sm font-black uppercase tracking-widest cursor-pointer transition-all"
-              style={{ background: copied ? GRAD2 : GRAD, boxShadow: copied ? `0 0 30px rgba(0,245,212,0.3)` : `0 0 30px rgba(255,0,110,0.35)`, minHeight: "52px", color: "white" }}>
+              style={{ background: copied ? GRAD2 : GRAD, boxShadow: copied ? `0 0 30px rgba(132,204,22,0.3)` : `0 0 30px rgba(99,102,241,0.35)`, minHeight: "52px", color: "white" }}>
               {copied ? "✓ COPIED TO CLIPBOARD" : "COPY EMAIL"}
             </button>
           </div>

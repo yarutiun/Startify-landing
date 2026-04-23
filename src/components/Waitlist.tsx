@@ -77,14 +77,14 @@ export default function Waitlist() {
         <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-8"
           style={{
-            background: "rgba(139,92,246,0.1)",
-            border: "1px solid rgba(139,92,246,0.25)",
-            color: "#a78bfa",
+            background: "rgba(99,102,241,0.1)",
+            border: "1px solid rgba(99,102,241,0.25)",
+            color: "#A78BFA",
           }}
         >
           <span
             className="w-1.5 h-1.5 rounded-full"
-            style={{ background: "#a78bfa", animation: "pulse 2s infinite" }}
+            style={{ background: "#A78BFA", animation: "pulse 2s infinite" }}
           />
           Limited early access
         </div>
@@ -124,7 +124,7 @@ export default function Waitlist() {
                 color: "white",
               }}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = "rgba(139,92,246,0.5)";
+                e.currentTarget.style.borderColor = "rgba(99,102,241,0.5)";
                 trackEvent("waitlist_email_focused");
               }}
               onBlur={(e) => {
@@ -153,11 +153,11 @@ export default function Waitlist() {
               style={{ background: "rgba(74,222,128,0.15)" }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8L6.5 11.5L13 5" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 8L6.5 11.5L13 5" stroke="#84CC16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
             <div className="text-left">
-              <p className="text-sm font-semibold" style={{ color: "#4ade80" }}>
+              <p className="text-sm font-semibold" style={{ color: "#84CC16" }}>
                 You&rsquo;re on the list!
               </p>
               <p className="text-xs" style={{ color: "var(--text-muted)" }}>

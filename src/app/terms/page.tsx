@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 const K = {
   bg:     "#05010f",
   card:   "#120830",
-  hot:    "#ff006e",
-  purple: "#8338ec",
-  orange: "#fb5607",
+  hot:    "#6366F1",
+  purple: "#A78BFA",
+  orange: "#84CC16",
   text:   "#ffffff",
   muted:  "rgba(255,255,255,0.55)",
   dim:    "rgba(255,255,255,0.1)",
 };
 
-const GRAD2 = `linear-gradient(135deg,${K.purple},#00f5d4)`;
+const GRAD2 = `linear-gradient(135deg,${K.purple},${K.orange})`;
 
 export default function TermsPage() {
   const updated = "April 22, 2026";
@@ -26,7 +26,7 @@ export default function TermsPage() {
 
   return (
     <div style={{ fontFamily: "var(--font-inter), sans-serif", background: K.bg, color: K.text, minHeight: "100vh" }}>
-      <style>{`.legal-link { color: #ff006e; text-decoration: none; font-weight: 700; } .legal-link:hover { text-decoration: underline; }`}</style>
+      <style>{`.legal-link { color: #6366F1; text-decoration: none; font-weight: 700; } .legal-link:hover { text-decoration: underline; }`}</style>
       {/* Top bar */}
       <div style={{ borderBottom: `1px solid ${K.dim}`, background: "rgba(12,5,32,0.95)", backdropFilter: "blur(20px)" }} className="sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

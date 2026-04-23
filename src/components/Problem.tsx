@@ -9,27 +9,27 @@ const problems = [
     title: "You open 12 tabs.",
     subtitle: "Then close all 12.",
     body: "You research the task, fall down ADHD rabbit holes, refresh feeds, and still haven’t crossed the scary starting line.",
-    color: "#f59e0b",
-    bg: "rgba(245,158,11,0.06)",
-    border: "rgba(245,158,11,0.15)",
+    color: "#84CC16",
+    bg: "rgba(132,204,22,0.08)",
+    border: "rgba(132,204,22,0.2)",
   },
   {
     emoji: "📋",
     title: "You write the perfect plan.",
     subtitle: "Then ignore it.",
     body: "The plan is gorgeous—executive function loves organizing—yet the first physical move still feels impossible for days.",
-    color: "#ec4899",
-    bg: "rgba(236,72,153,0.06)",
-    border: "rgba(236,72,153,0.15)",
+    color: "#A78BFA",
+    bg: "rgba(167,139,250,0.08)",
+    border: "rgba(167,139,250,0.2)",
   },
   {
     emoji: "⏳",
     title: "\"Tomorrow I'll actually start.\"",
     subtitle: "You've said this 47 times.",
     body: "Procrastination shame piles on top of the task. Waiting doesn’t shrink it—it makes the freeze louder, especially if ADHD anxiety tags along.",
-    color: "#8b5cf6",
-    bg: "rgba(139,92,246,0.06)",
-    border: "rgba(139,92,246,0.15)",
+    color: "#6366F1",
+    bg: "rgba(99,102,241,0.08)",
+    border: "rgba(99,102,241,0.2)",
   },
 ];
 
@@ -71,9 +71,9 @@ export default function Problem() {
           <div
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
             style={{
-              color: "#f59e0b",
-              background: "rgba(245,158,11,0.08)",
-              border: "1px solid rgba(245,158,11,0.15)",
+              color: "#84CC16",
+              background: "rgba(132,204,22,0.1)",
+              border: "1px solid rgba(132,204,22,0.2)",
             }}
           >
             Sound familiar?
@@ -150,7 +150,7 @@ export default function Problem() {
           >
             <div
               className="w-2 h-2 rounded-full"
-              style={{ background: "#8b5cf6", animation: "pulse 2s infinite" }}
+              style={{ background: "#6366F1", animation: "pulse 2s infinite" }}
             />
             <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
               The problem isn&rsquo;t caring.{" "}

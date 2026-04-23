@@ -30,10 +30,10 @@ const STREAK_WEEK = [
 
 const LOOP_STEPS = [
   { icon: "💭", label: "You have a goal",       color: "#94a3b8" },
-  { icon: "⚡", label: "One micro-action",       color: "#a78bfa" },
-  { icon: "✓",  label: "Done → +XP",            color: "#4ade80" },
+  { icon: "⚡", label: "One micro-action",       color: "#A78BFA" },
+  { icon: "✓",  label: "Done → +XP",            color: "#84CC16" },
   { icon: "🔥", label: "Streak grows",           color: "#fbbf24" },
-  { icon: "🏆", label: "Achievement unlocks",   color: "#fb923c" },
+  { icon: "🏆", label: "Achievement unlocks",   color: "#A78BFA" },
   { icon: "🔁", label: "You crave one more",     color: "#f472b6" },
 ];
 
@@ -80,13 +80,13 @@ export default function Gamification() {
         >
           <div
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
-            style={{ color: "#fb923c", background: "rgba(249,115,22,0.08)", border: "1px solid rgba(249,115,22,0.18)" }}
+            style={{ color: "#A78BFA", background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.22)" }}
           >
             Rewards that respect ADHD wiring
           </div>
           <h2 className="font-bold text-white mb-4" style={{ fontSize: "clamp(32px,5vw,52px)", letterSpacing: "-0.03em" }}>
             Finishing micro-steps becomes{" "}
-            <span style={{ background: "linear-gradient(135deg,#fb923c,#f472b6,#a78bfa)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: "linear-gradient(135deg,#6366F1,#A78BFA,#84CC16)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               satisfying
             </span>
           </h2>
@@ -103,7 +103,7 @@ export default function Gamification() {
             <div className="rounded-2xl p-5 h-full" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid var(--border)" }}>
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-semibold text-white">50+ Achievements</p>
-                <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "rgba(74,222,128,0.1)", color: "#4ade80", border: "1px solid rgba(74,222,128,0.2)" }}>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "rgba(132,204,22,0.12)", color: "#84CC16", border: "1px solid rgba(132,204,22,0.22)" }}>
                   3 unlocked
                 </span>
               </div>
@@ -114,8 +114,8 @@ export default function Gamification() {
                     key={i}
                     className="flex items-center gap-2 p-2 rounded-xl transition-all duration-200"
                     style={{
-                      background: a.locked ? "rgba(255,255,255,0.02)" : "rgba(139,92,246,0.08)",
-                      border: `1px solid ${a.locked ? "rgba(255,255,255,0.05)" : "rgba(139,92,246,0.2)"}`,
+                      background: a.locked ? "rgba(255,255,255,0.02)" : "rgba(167,139,250,0.1)",
+                      border: `1px solid ${a.locked ? "rgba(255,255,255,0.05)" : "rgba(167,139,250,0.22)"}`,
                       opacity: a.locked ? 0.45 : 1,
                       filter: a.locked ? "grayscale(0.5)" : "none",
                       cursor: "default",
@@ -129,7 +129,7 @@ export default function Gamification() {
                       <p className="text-xs font-semibold truncate" style={{ color: a.locked ? "var(--text-muted)" : "white" }}>
                         {a.name}
                       </p>
-                      <p className="text-xs" style={{ color: a.locked ? "var(--text-muted)" : "#a78bfa" }}>
+                      <p className="text-xs" style={{ color: a.locked ? "var(--text-muted)" : "#A78BFA" }}>
                         +{a.xp} XP
                       </p>
                     </div>
@@ -189,7 +189,7 @@ export default function Gamification() {
                 {[
                   { emoji: "🌱", name: "Starter",  xp: "0",    color: "#94a3b8" },
                   { emoji: "🚶", name: "Moving",   xp: "100",  color: "#60a5fa" },
-                  { emoji: "🏃", name: "In Flow",  xp: "250",  color: "#a78bfa" },
+                  { emoji: "🏃", name: "In Flow",  xp: "250",  color: "#A78BFA" },
                   { emoji: "⚡", name: "Machine",  xp: "420+", color: "#fbbf24" },
                 ].map((l, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -275,6 +275,6 @@ export default function Gamification() {
 
 function hexToRgb(hex: string) {
   const r = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  if (!r) return "139,92,246";
+  if (!r) return "99,102,241";
   return `${parseInt(r[1], 16)},${parseInt(r[2], 16)},${parseInt(r[3], 16)}`;
 }

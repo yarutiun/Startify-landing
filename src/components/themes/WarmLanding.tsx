@@ -33,7 +33,7 @@ function WarmNav() {
       style={{ background: scrolled ? "rgba(250,246,241,0.92)" : "transparent", backdropFilter: scrolled ? "blur(16px)" : "none", borderBottom: scrolled ? "1px solid rgba(200,160,100,0.2)" : "1px solid transparent" }}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: "#e8572a" }}>
+          <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: "#6366F1" }}>
             <span style={{ color: "white", fontSize: "14px", fontWeight: 700 }}>→</span>
           </div>
           <span className="font-bold text-sm tracking-tight" style={{ color: "#1a1208" }}>Startify</span>
@@ -41,9 +41,9 @@ function WarmNav() {
         <button
           onClick={() => { trackEvent("nav_cta_clicked", { theme: "warm" }); document.getElementById("warm-waitlist")?.scrollIntoView({ behavior: "smooth" }); }}
           className="text-sm font-semibold px-4 py-2 rounded-full cursor-pointer transition-all"
-          style={{ background: "#e8572a", color: "white" }}
-          onMouseEnter={e => (e.currentTarget.style.background = "#d4450f")}
-          onMouseLeave={e => (e.currentTarget.style.background = "#e8572a")}
+          style={{ background: "#6366F1", color: "white" }}
+          onMouseEnter={e => (e.currentTarget.style.background = "#4f46e5")}
+          onMouseLeave={e => (e.currentTarget.style.background = "#6366F1")}
         >
           Join waitlist
         </button>
@@ -73,26 +73,26 @@ function WarmHero() {
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden" style={{ background: "linear-gradient(160deg,#fdf8f2 0%,#faf0e4 50%,#fdf5ec 100%)" }}>
       {/* Decorative blob */}
-      <div className="absolute pointer-events-none" style={{ top: "0", right: "0", width: "500px", height: "500px", background: "radial-gradient(ellipse at top right,rgba(232,87,42,0.07),transparent 60%)" }} />
+      <div className="absolute pointer-events-none" style={{ top: "0", right: "0", width: "500px", height: "500px", background: "radial-gradient(ellipse at top right,rgba(99,102,241,0.07),transparent 60%)" }} />
       <div className="absolute pointer-events-none" style={{ bottom: "0", left: "10%", width: "300px", height: "300px", background: "radial-gradient(ellipse,rgba(245,158,11,0.06),transparent 60%)" }} />
 
       {/* Squiggle decoration */}
       <div className="absolute top-24 right-20 opacity-10 pointer-events-none hidden lg:block">
         <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-          <path d="M20 60 Q40 20 60 60 Q80 100 100 60" stroke="#e8572a" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M20 60 Q40 20 60 60 Q80 100 100 60" stroke="#6366F1" strokeWidth="3" fill="none" strokeLinecap="round"/>
         </svg>
       </div>
 
       <div className="max-w-3xl mx-auto text-center" style={{ opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(16px)", transition: "opacity .7s ease, transform .7s ease" }}>
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8" style={{ background: "rgba(232,87,42,0.1)", border: "1px solid rgba(232,87,42,0.2)", color: "#c43d0d" }}>
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#e8572a" }} />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8" style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.2)", color: "#4f46e5" }}>
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#6366F1" }} />
           Early access · ADHD · procrastination support
         </div>
 
         <h1 className="font-bold mb-6" style={{ fontSize: "clamp(44px,7vw,88px)", letterSpacing: "-0.04em", lineHeight: 1, color: "#1a1208" }}>
           Task paralysis<br />
-          <span style={{ color: "#e8572a" }}>isn&apos;t a character flaw.</span><br />
+          <span style={{ color: "#6366F1" }}>isn&apos;t a character flaw.</span><br />
           <span style={{ color: "#78350f", opacity: 0.7 }}>It&apos;s a stuck nervous system.</span>
         </h1>
 
@@ -107,19 +107,19 @@ function WarmHero() {
               onChange={e => setEmail(e.target.value)}
               className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:min-h-0 sm:h-auto sm:py-3.5 sm:text-sm"
               style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.15)", color: "#1a1208" }}
-              onFocus={e => (e.currentTarget.style.borderColor = "#e8572a")}
+              onFocus={e => (e.currentTarget.style.borderColor = "#6366F1")}
               onBlur={e => (e.currentTarget.style.borderColor = "rgba(120,53,15,0.15)")}
             />
             <button type="submit" className="w-full min-h-14 px-6 text-base font-bold text-white cursor-pointer rounded-xl transition-all sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm"
-              style={{ background: "#e8572a", boxShadow: "0 4px 20px rgba(232,87,42,0.35)" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#d4450f")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#e8572a")}
+              style={{ background: "#6366F1", boxShadow: "0 4px 20px rgba(99,102,241,0.35)" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#4f46e5")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#6366F1")}
             >
               Get early access →
             </button>
           </form>
         ) : (
-          <div className="flex items-center justify-center gap-2 py-3" style={{ color: "#16a34a" }}>
+          <div className="flex items-center justify-center gap-2 py-3" style={{ color: "#84CC16" }}>
             <span>✓</span><span className="font-semibold">You&rsquo;re on the list! We&rsquo;ll be in touch.</span>
           </div>
         )}
@@ -140,19 +140,19 @@ function WarmStepCard() {
   return (
     <div className="w-full max-w-xs text-left rounded-2xl p-6 shadow-xl" style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.12)", boxShadow: "0 20px 60px rgba(120,53,15,0.12)" }}>
       <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: "1px solid rgba(120,53,15,0.08)" }}>
-        <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#e8572a" }}>→</div>
+        <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#6366F1" }}>→</div>
         <span className="text-xs font-semibold" style={{ color: "#78350f" }}>Startify</span>
         <div className="ml-auto flex gap-1">
-          {steps.map((_, i) => <div key={i} className="w-1.5 h-1.5 rounded-full" style={{ background: i <= step ? "#e8572a" : "rgba(120,53,15,0.12)" }} />)}
+          {steps.map((_, i) => <div key={i} className="w-1.5 h-1.5 rounded-full" style={{ background: i <= step ? "#6366F1" : "rgba(120,53,15,0.12)" }} />)}
         </div>
       </div>
       <p className="text-xs mb-3" style={{ color: "#78350f", fontStyle: "italic" }}>
         &ldquo;Executive dysfunction + procrastination on boring adult stuff&rdquo;
       </p>
-      <p className="text-xs font-bold mb-1" style={{ color: "#e8572a" }}>Step {step + 1}</p>
+      <p className="text-xs font-bold mb-1" style={{ color: "#6366F1" }}>Step {step + 1}</p>
       <p className="text-base font-bold mb-4" style={{ color: "#1a1208", lineHeight: 1.4 }}>{steps[step]}</p>
       <div className="flex gap-2">
-        <button onClick={() => { if (step < steps.length - 1) setStep(s => s + 1); }} className="flex-1 py-2.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>✓ Done</button>
+        <button onClick={() => { if (step < steps.length - 1) setStep(s => s + 1); }} className="flex-1 py-2.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#6366F1" }}>✓ Done</button>
         <button className="flex-1 py-2.5 rounded-xl text-sm font-medium cursor-pointer" style={{ background: "rgba(120,53,15,0.06)", color: "#78350f", border: "1px solid rgba(120,53,15,0.1)" }}>I&rsquo;m stuck</button>
       </div>
     </div>
@@ -167,15 +167,15 @@ function WarmProblem() {
     <section className="py-20 px-6" style={{ background: "#fdf5ec" }}>
       <div className="max-w-5xl mx-auto">
         <div className="max-w-xl mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#e8572a" }}>Sound familiar?</p>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#6366F1" }}>Sound familiar?</p>
           <h2 className="font-bold mb-4" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>
             You care about the outcome.<br /><span style={{ color: "#78350f" }}>Procrastination still hijacks the start.</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { emoji: "🌀", title: "Hyperfocus on the wrong thing", body: "You “research” the task until you’re exhausted. Classic ADHD time warp—not a discipline problem.", color: "#e8572a" },
-            { emoji: "📋", title: "Planning as procrastination", body: "Color-coded calendars feel productive while the scary first step stays untouched. Executive function says nope.", color: "#f59e0b" },
+            { emoji: "🌀", title: "Hyperfocus on the wrong thing", body: "You “research” the task until you’re exhausted. Classic ADHD time warp—not a discipline problem.", color: "#6366F1" },
+            { emoji: "📋", title: "Planning as procrastination", body: "Color-coded calendars feel productive while the scary first step stays untouched. Executive function says nope.", color: "#A78BFA" },
             { emoji: "⏳", title: "Shame-fueled delay", body: "Every “I’ll start tomorrow” adds weight. The freeze gets louder. You’re not broken—your brain needs a smaller lever.", color: "#78350f" },
           ].map((p, i) => (
             <div key={i} className="rounded-2xl p-6" style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.08)", boxShadow: "0 2px 20px rgba(120,53,15,0.05)" }}>
@@ -208,10 +208,10 @@ function WarmHowItWorks() {
             { n: "3", title: "Do it. Repeat.", desc: "Done → celebrate + next micro-step. Stuck → it shrinks again until your body says okay.", ex: "Step 2 → Step 3 → … → the task finally feels real." },
           ].map((s, i) => (
             <div key={i} className="relative">
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-black mb-4" style={{ background: "#e8572a", color: "white" }}>{s.n}</div>
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-black mb-4" style={{ background: "#6366F1", color: "white" }}>{s.n}</div>
               <h3 className="text-lg font-bold mb-2" style={{ color: "#1a1208" }}>{s.title}</h3>
               <p className="text-sm mb-3" style={{ color: "#78350f", lineHeight: 1.7 }}>{s.desc}</p>
-              <code className="text-xs block px-3 py-2 rounded-lg" style={{ background: "rgba(232,87,42,0.08)", color: "#c43d0d" }}>{s.ex}</code>
+              <code className="text-xs block px-3 py-2 rounded-lg" style={{ background: "rgba(167,139,250,0.12)", color: "#4f46e5" }}>{s.ex}</code>
             </div>
           ))}
         </div>
@@ -275,23 +275,23 @@ function WarmDemo() {
                   <div className="px-4 py-3 rounded-xl text-sm mb-5" style={{ background: "#faf6f1", border: "1px solid rgba(120,53,15,0.1)", color: "#1a1208" }}>
                     &ldquo;I keep procrastinating—ADHD brain, zero momentum, tons of guilt&rdquo;
                   </div>
-                  <button onClick={() => setStarted(true)} className="w-full py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>Start the kindness loop →</button>
+                  <button onClick={() => setStarted(true)} className="w-full py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#6366F1" }}>Start the kindness loop →</button>
                 </div>
               ) : (
                 <div>
                   <div className="flex gap-1 mb-4">
-                    {steps.map((_, i) => <div key={i} className="flex-1 h-1 rounded-full" style={{ background: i < step ? "#e8572a" : i === step ? "rgba(232,87,42,0.3)" : "rgba(120,53,15,0.08)" }} />)}
+                    {steps.map((_, i) => <div key={i} className="flex-1 h-1 rounded-full" style={{ background: i < step ? "#6366F1" : i === step ? "rgba(99,102,241,0.3)" : "rgba(120,53,15,0.08)" }} />)}
                   </div>
                   {toast && (
-                    <div className="mb-3 px-3 py-2 rounded-lg text-xs font-semibold text-center" style={{ background: "rgba(232,87,42,0.1)", color: "#e8572a", animation: "fadeIn .3s ease" }}>
+                    <div className="mb-3 px-3 py-2 rounded-lg text-xs font-semibold text-center" style={{ background: "rgba(99,102,241,0.1)", color: "#6366F1", animation: "fadeIn .3s ease" }}>
                       {toast}
                     </div>
                   )}
-                  <span className="text-xs font-bold" style={{ color: "#e8572a" }}>Step {step + 1} · {steps[step].tag}</span>
+                  <span className="text-xs font-bold" style={{ color: "#6366F1" }}>Step {step + 1} · {steps[step].tag}</span>
                   <p className="text-base font-bold my-2" style={{ color: "#1a1208", lineHeight: 1.4 }}>{steps[step].text}</p>
                   <p className="text-sm mb-4" style={{ color: "#78350f" }}>{steps[step].hint}</p>
                   <div className="flex gap-2">
-                    <button onClick={handleDone} className="flex-1 py-3 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>
+                    <button onClick={handleDone} className="flex-1 py-3 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#6366F1" }}>
                       ✓ Done <span style={{ opacity: 0.7, fontSize: "11px" }}>+{steps[step].xp} XP</span>
                     </button>
                     <button className="flex-1 py-3 rounded-xl text-sm cursor-pointer" style={{ background: "rgba(120,53,15,0.06)", color: "#78350f", border: "1px solid rgba(120,53,15,0.1)" }}>I&rsquo;m stuck</button>
@@ -308,21 +308,21 @@ function WarmDemo() {
                 <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "#78350f" }}>Progress</p>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-bold" style={{ color: "#1a1208" }}>{xp} XP</span>
-                  <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ background: "rgba(232,87,42,0.1)", color: "#e8572a" }}>Starter 🌱</span>
+                  <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ background: "rgba(99,102,241,0.1)", color: "#6366F1" }}>Starter 🌱</span>
                 </div>
                 <div className="h-2 rounded-full" style={{ background: "rgba(120,53,15,0.1)" }}>
-                  <div className="h-full rounded-full transition-all duration-500" style={{ width: `${Math.min(100, xp)}%`, background: "linear-gradient(90deg,#e8572a,#f59e0b)" }} />
+                  <div className="h-full rounded-full transition-all duration-500" style={{ width: `${Math.min(100, xp)}%`, background: "linear-gradient(90deg,#6366F1,#A78BFA)" }} />
                 </div>
               </div>
               <div className="rounded-2xl p-4 flex items-center gap-3" style={{ background: "#faf6f1", border: "1px solid rgba(120,53,15,0.1)" }}>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-5 h-5 rounded text-xs flex items-center justify-center" style={{ background: i < streak ? "rgba(232,87,42,0.15)" : "rgba(120,53,15,0.06)", border: `1px solid ${i < streak ? "rgba(232,87,42,0.3)" : "rgba(120,53,15,0.08)"}` }}>
+                    <div key={i} className="w-5 h-5 rounded text-xs flex items-center justify-center" style={{ background: i < streak ? "rgba(99,102,241,0.15)" : "rgba(120,53,15,0.06)", border: `1px solid ${i < streak ? "rgba(99,102,241,0.3)" : "rgba(120,53,15,0.08)"}` }}>
                       {i < streak ? "🔥" : ""}
                     </div>
                   ))}
                 </div>
-                <span className="text-xs" style={{ color: streak > 0 ? "#e8572a" : "#78350f" }}>{streak > 0 ? `${streak} step streak!` : "Build your streak"}</span>
+                <span className="text-xs" style={{ color: streak > 0 ? "#6366F1" : "#78350f" }}>{streak > 0 ? `${streak} step streak!` : "Build your streak"}</span>
               </div>
             </div>
           )}
@@ -341,7 +341,7 @@ function WarmGamification() {
       <div className="max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#e8572a" }}>Dopamine, but pointed at real life</p>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#6366F1" }}>Dopamine, but pointed at real life</p>
             <h2 className="font-bold mb-4" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>
               Finishing micro-steps becomes a habit you actually <em>want</em>
             </h2>
@@ -373,7 +373,7 @@ function WarmGamification() {
               { emoji: "💯", name: "100 Steps", locked: true },
               { emoji: "🤖", name: "Machine", locked: true },
             ].map((a, i) => (
-              <div key={i} className="flex flex-col items-center gap-1.5 p-3 rounded-2xl text-center transition-all" style={{ background: a.locked ? "rgba(120,53,15,0.04)" : "white", border: `1px solid ${a.locked ? "rgba(120,53,15,0.08)" : "rgba(232,87,42,0.2)"}`, opacity: a.locked ? 0.5 : 1 }}>
+              <div key={i} className="flex flex-col items-center gap-1.5 p-3 rounded-2xl text-center transition-all" style={{ background: a.locked ? "rgba(120,53,15,0.04)" : "white", border: `1px solid ${a.locked ? "rgba(120,53,15,0.08)" : "rgba(99,102,241,0.2)"}`, opacity: a.locked ? 0.5 : 1 }}>
                 <span className="text-2xl">{a.locked ? "🔒" : a.emoji}</span>
                 <span className="text-xs font-semibold" style={{ color: a.locked ? "#78350f" : "#1a1208" }}>{a.name}</span>
               </div>
@@ -412,15 +412,15 @@ function WarmWaitlist() {
             <input type="email" required placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
               className="flex-1 w-full min-h-14 px-4 text-base leading-normal rounded-xl outline-none sm:min-h-0 sm:h-auto sm:py-3.5 sm:text-sm"
               style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", color: "white" }}
-              onFocus={e => (e.currentTarget.style.borderColor = "#e8572a")}
+              onFocus={e => (e.currentTarget.style.borderColor = "#6366F1")}
               onBlur={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)")}
             />
-            <button type="submit" className="w-full min-h-14 px-6 text-base font-bold text-white cursor-pointer rounded-xl sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm" style={{ background: "#e8572a" }}>
+            <button type="submit" className="w-full min-h-14 px-6 text-base font-bold text-white cursor-pointer rounded-xl sm:min-h-0 sm:w-auto sm:py-3.5 sm:text-sm" style={{ background: "#6366F1" }}>
               Get early access →
             </button>
           </form>
         ) : (
-          <div className="flex items-center justify-center gap-2 py-3" style={{ color: "#4ade80" }}>
+          <div className="flex items-center justify-center gap-2 py-3" style={{ color: "#84CC16" }}>
             <span>✓</span><span className="font-semibold">You&rsquo;re on the list!</span>
           </div>
         )}

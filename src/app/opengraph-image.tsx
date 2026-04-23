@@ -32,7 +32,7 @@ export default function OgImage() {
             width: "800px",
             height: "500px",
             background:
-              "radial-gradient(ellipse at center, rgba(109,40,217,0.25) 0%, rgba(79,70,229,0.1) 50%, transparent 70%)",
+              "radial-gradient(ellipse at center, rgba(99,102,241,0.22) 0%, rgba(167,139,250,0.12) 50%, transparent 70%)",
             borderRadius: "50%",
           }}
         />
@@ -51,7 +51,7 @@ export default function OgImage() {
               width: "40px",
               height: "40px",
               borderRadius: "10px",
-              background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+              background: "linear-gradient(135deg, #6366F1, #4f46e5)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -101,7 +101,7 @@ export default function OgImage() {
             lineHeight: 1,
             textAlign: "center",
             marginBottom: "32px",
-            background: "linear-gradient(135deg, #a78bfa, #818cf8, #38bdf8)",
+            background: "linear-gradient(135deg, #6366F1, #A78BFA, #84CC16)",
             backgroundClip: "text",
             color: "transparent",
           }}
@@ -130,14 +130,14 @@ export default function OgImage() {
             padding: "20px 28px",
             borderRadius: "16px",
             background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(139,92,246,0.25)",
+            border: "1px solid rgba(167,139,250,0.28)",
             display: "flex",
             flexDirection: "column",
             gap: "8px",
           }}
         >
           <div
-            style={{ fontSize: "12px", color: "#8b5cf6", fontWeight: 600 }}
+            style={{ fontSize: "12px", color: "#6366F1", fontWeight: 600 }}
           >
             Step 1
           </div>
@@ -149,7 +149,7 @@ export default function OgImage() {
               style={{
                 padding: "6px 16px",
                 borderRadius: "8px",
-                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                background: "linear-gradient(135deg, #6366F1, #4f46e5)",
                 color: "white",
                 fontSize: "12px",
                 fontWeight: 600,

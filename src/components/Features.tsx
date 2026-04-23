@@ -12,7 +12,7 @@ const features = [
     ),
     title: "Instant micro-actions",
     desc: "Every step is body-level and finishable in minutes—built for ADHD time blindness and “I’ll do it later” loops.",
-    color: "#8b5cf6",
+    color: "#6366F1",
   },
   {
     icon: (
@@ -23,7 +23,7 @@ const features = [
     ),
     title: "Zero decision fatigue",
     desc: "One step on screen at a time so working memory isn’t juggling a whole project—just “can my body do this micro-move now?”",
-    color: "#22d3ee",
+    color: "#A78BFA",
   },
   {
     icon: (
@@ -33,7 +33,7 @@ const features = [
     ),
     title: "Adaptive simplification",
     desc: "Tap “I’m stuck” and the step shrinks again—perfect for shame spirals when even small tasks feel huge.",
-    color: "#f59e0b",
+    color: "#84CC16",
   },
   {
     icon: (
@@ -44,7 +44,7 @@ const features = [
     ),
     title: "Momentum tracking",
     desc: "Every completed micro-win is counted so dopamine hits come from progress, not from doomscrolling.",
-    color: "#4ade80",
+    color: "#6366F1",
   },
   {
     icon: (
@@ -54,7 +54,7 @@ const features = [
     ),
     title: "Works for anything",
     desc: "Chores, school, paperwork, health habits, creative projects—anything procrastination or ADHD initiation blocks.",
-    color: "#ec4899",
+    color: "#A78BFA",
   },
   {
     icon: (
@@ -65,7 +65,7 @@ const features = [
     ),
     title: "No onboarding required",
     desc: "Open the app, brain-dump the stuck, get one next step. No productivity theater standing between you and motion.",
-    color: "#818cf8",
+    color: "#84CC16",
   },
 ];
 
@@ -109,9 +109,9 @@ export default function Features() {
           <div
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
             style={{
-              color: "#4ade80",
-              background: "rgba(74,222,128,0.08)",
-              border: "1px solid rgba(74,222,128,0.15)",
+              color: "#84CC16",
+              background: "rgba(132,204,22,0.1)",
+              border: "1px solid rgba(132,204,22,0.22)",
             }}
           >
             What&rsquo;s inside
@@ -173,6 +173,6 @@ export default function Features() {
 
 function hexToRgb(hex: string) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  if (!result) return "139,92,246";
+  if (!result) return "99,102,241";
   return `${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(result[3], 16)}`;
 }

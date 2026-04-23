@@ -88,14 +88,14 @@ export default function Hero() {
         <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-8"
           style={{
-            background: "rgba(139,92,246,0.1)",
-            border: "1px solid rgba(139,92,246,0.25)",
-            color: "#a78bfa",
+            background: "rgba(99,102,241,0.1)",
+            border: "1px solid rgba(99,102,241,0.25)",
+            color: "#A78BFA",
           }}
         >
           <span
             className="w-1.5 h-1.5 rounded-full"
-            style={{ background: "#a78bfa", animation: "pulse 2s infinite" }}
+            style={{ background: "#A78BFA", animation: "pulse 2s infinite" }}
           />
           Early access · ADHD · procrastination support
         </div>
@@ -180,7 +180,7 @@ export default function Hero() {
                 color: "white",
               }}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = "rgba(139,92,246,0.5)";
+                e.currentTarget.style.borderColor = "rgba(99,102,241,0.5)";
                 e.currentTarget.style.background = "rgba(255,255,255,0.07)";
                 trackEvent("hero_email_focused");
               }}
@@ -202,7 +202,7 @@ export default function Hero() {
         ) : (
           <div
             className="flex items-center justify-center gap-3 py-3"
-            style={{ color: "#4ade80" }}
+            style={{ color: "#84CC16" }}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M5 10L8.5 13.5L15 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -244,7 +244,7 @@ export default function Hero() {
           <div
             className="w-1 h-2 rounded-full"
             style={{
-              background: "rgba(139,92,246,0.7)",
+              background: "rgba(99,102,241,0.7)",
               animation: "scrollDot 2s ease-in-out infinite",
             }}
           />
@@ -299,7 +299,7 @@ function HeroStepCard() {
         className="relative rounded-2xl p-6"
         style={{
           background: "var(--bg-card)",
-          border: "1px solid rgba(139,92,246,0.25)",
+          border: "1px solid rgba(99,102,241,0.25)",
         }}
       >
         {/* Header */}
@@ -309,7 +309,7 @@ function HeroStepCard() {
         >
           <div
             className="w-6 h-6 rounded-lg flex items-center justify-center"
-            style={{ background: "linear-gradient(135deg, #7c3aed, #4f46e5)" }}
+            style={{ background: "linear-gradient(135deg, #6366F1, #4f46e5)" }}
           >
             <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
               <path d="M7 1L13 7L7 13M1 7H13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -324,7 +324,7 @@ function HeroStepCard() {
                 key={i}
                 className="w-1.5 h-1.5 rounded-full transition-all duration-300"
                 style={{
-                  background: i <= step ? "#8b5cf6" : "rgba(255,255,255,0.1)",
+                  background: i <= step ? "#6366F1" : "rgba(255,255,255,0.1)",
                 }}
               />
             ))}
@@ -347,7 +347,7 @@ function HeroStepCard() {
         <div key={step} style={{ animation: "fadeIn 0.3s ease" }}>
           <div
             className="text-xs font-medium mb-2"
-            style={{ color: "#8b5cf6" }}
+            style={{ color: "#6366F1" }}
           >
             Step {step + 1}
           </div>
@@ -362,7 +362,7 @@ function HeroStepCard() {
             onClick={handleDone}
             className="flex-1 py-2.5 rounded-xl text-sm font-semibold cursor-pointer transition-all duration-200"
             style={{
-              background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+              background: "linear-gradient(135deg, #6366F1, #4f46e5)",
               color: "white",
             }}
             onMouseEnter={(e) => {
@@ -417,7 +417,7 @@ function HeroStepCard() {
             style={{
               background: "rgba(74,222,128,0.08)",
               border: "1px solid rgba(74,222,128,0.15)",
-              color: "#4ade80",
+              color: "#84CC16",
               animation: "fadeIn 0.3s ease",
             }}
           >

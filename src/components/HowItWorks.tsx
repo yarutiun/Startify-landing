@@ -84,9 +84,9 @@ export default function HowItWorks() {
           <div
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
             style={{
-              color: "#8b5cf6",
-              background: "rgba(139,92,246,0.08)",
-              border: "1px solid rgba(139,92,246,0.15)",
+              color: "#6366F1",
+              background: "rgba(99,102,241,0.08)",
+              border: "1px solid rgba(99,102,241,0.15)",
             }}
           >
             How it works
@@ -107,7 +107,7 @@ export default function HowItWorks() {
           {/* Connector line */}
           <div
             className="hidden md:block absolute top-12 left-1/3 right-1/3 h-px"
-            style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.3), transparent)" }}
+            style={{ background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent)" }}
           />
 
           {steps.map((s, i) => (
@@ -126,15 +126,15 @@ export default function HowItWorks() {
                   className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
                   style={{
                     background: "linear-gradient(135deg, rgba(124,58,237,0.2), rgba(79,70,229,0.2))",
-                    border: "1px solid rgba(139,92,246,0.25)",
-                    color: "#a78bfa",
+                    border: "1px solid rgba(99,102,241,0.25)",
+                    color: "#A78BFA",
                   }}
                 >
                   {s.icon}
                 </div>
                 <span
                   className="font-bold text-2xl"
-                  style={{ color: "rgba(139,92,246,0.3)", fontVariantNumeric: "tabular-nums" }}
+                  style={{ color: "rgba(99,102,241,0.3)", fontVariantNumeric: "tabular-nums" }}
                 >
                   {s.number}
                 </span>
@@ -152,9 +152,9 @@ export default function HowItWorks() {
               <div
                 className="inline-block px-3 py-1.5 rounded-lg text-xs font-mono"
                 style={{
-                  background: "rgba(139,92,246,0.08)",
-                  border: "1px solid rgba(139,92,246,0.15)",
-                  color: "#a78bfa",
+                  background: "rgba(99,102,241,0.08)",
+                  border: "1px solid rgba(99,102,241,0.15)",
+                  color: "#A78BFA",
                 }}
               >
                 {s.detail}
@@ -169,7 +169,7 @@ export default function HowItWorks() {
           style={{
             background:
               "linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(79,70,229,0.05) 100%)",
-            border: "1px solid rgba(139,92,246,0.15)",
+            border: "1px solid rgba(99,102,241,0.15)",
             opacity: visible ? 1 : 0,
             transition: "opacity 0.6s ease 0.55s",
           }}

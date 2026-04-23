@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <div
               className="w-6 h-6 rounded-lg flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #7c3aed, #4f46e5)" }}
+              style={{ background: "linear-gradient(135deg, #6366F1, #4f46e5)" }}
             >
               <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
                 <path d="M7 1L13 7L7 13M1 7H13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

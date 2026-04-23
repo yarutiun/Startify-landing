@@ -36,20 +36,20 @@ interface Achievement {
 const LEVELS = [
   { name: "Starter",  emoji: "🌱", min: 0,   color: "#94a3b8" },
   { name: "Moving",   emoji: "🚶", min: 100,  color: "#60a5fa" },
-  { name: "In Flow",  emoji: "🏃", min: 250,  color: "#a78bfa" },
+  { name: "In Flow",  emoji: "🏃", min: 250,  color: "#A78BFA" },
   { name: "Machine",  emoji: "⚡", min: 420,  color: "#fbbf24" },
 ];
 
 const TAG_STYLES: Record<Tag, { bg: string; color: string }> = {
-  SETUP:   { bg: "rgba(99,102,241,0.15)",  color: "#818cf8" },
-  INSTALL: { bg: "rgba(34,211,238,0.12)",  color: "#22d3ee" },
-  CREATE:  { bg: "rgba(139,92,246,0.15)",  color: "#a78bfa" },
-  CODE:    { bg: "rgba(74,222,128,0.12)",  color: "#4ade80" },
-  FOCUS:   { bg: "rgba(251,191,36,0.12)",  color: "#fbbf24" },
-  READ:    { bg: "rgba(251,191,36,0.12)",  color: "#fbbf24" },
-  MOVE:    { bg: "rgba(249,115,22,0.12)",  color: "#fb923c" },
-  ACTION:  { bg: "rgba(236,72,153,0.12)",  color: "#f472b6" },
-  FLOW:    { bg: "rgba(34,211,238,0.12)",  color: "#22d3ee" },
+  SETUP:   { bg: "rgba(99,102,241,0.15)",  color: "#6366F1" },
+  INSTALL: { bg: "rgba(167,139,250,0.14)",  color: "#A78BFA" },
+  CREATE:  { bg: "rgba(167,139,250,0.15)",  color: "#A78BFA" },
+  CODE:    { bg: "rgba(132,204,22,0.12)",  color: "#84CC16" },
+  FOCUS:   { bg: "rgba(99,102,241,0.1)",  color: "#A78BFA" },
+  READ:    { bg: "rgba(167,139,250,0.12)",  color: "#A78BFA" },
+  MOVE:    { bg: "rgba(132,204,22,0.1)",  color: "#84CC16" },
+  ACTION:  { bg: "rgba(99,102,241,0.12)",  color: "#6366F1" },
+  FLOW:    { bg: "rgba(132,204,22,0.12)",  color: "#65a30d" },
 };
 
 const ACHIEVEMENT_DEFS: Achievement[] = [
@@ -65,7 +65,7 @@ const SCENARIOS: Scenario[] = [
   {
     label: "Frozen brain", emoji: "🧊",
     goal: "I need to start something important but ADHD paralysis keeps winning",
-    color: "#818cf8",
+    color: "#6366F1",
     steps: [
       { text: "Stand up and walk to where the task physically happens", hint: "No output yet—just relocate your body closer to the thing.", tag: "MOVE", xpReward: 50, stuckVersion: "Take five steps in that direction. You can sit back down after." },
       { text: "Set a 2-minute timer and flip your phone face-down", hint: "Two minutes. Face-down removes one dopamine lever.", tag: "FOCUS", xpReward: 50, stuckVersion: "If two minutes feels huge, set 90 seconds instead." },
@@ -77,7 +77,7 @@ const SCENARIOS: Scenario[] = [
   {
     label: "Studying", emoji: "📚",
     goal: "I need to study for an exam but procrastination keeps pulling me away",
-    color: "#22d3ee",
+    color: "#A78BFA",
     steps: [
       { text: "Open your materials to the exact page or deck you’re avoiding", hint: "No reading yet—just land on the right spot.", tag: "FOCUS", xpReward: 45, stuckVersion: "If you can’t find the page, open any page in that chapter." },
       { text: "Set a 5-minute timer and read only the first paragraph", hint: "Finger or cursor tracking counts. Stop when the timer ends.", tag: "READ", xpReward: 45, stuckVersion: "Read the first two sentences only if a paragraph feels huge." },
@@ -89,7 +89,7 @@ const SCENARIOS: Scenario[] = [
   {
     label: "Life admin", emoji: "🏠",
     goal: "I need to tackle boring adult tasks but executive dysfunction says nope",
-    color: "#4ade80",
+    color: "#84CC16",
     steps: [
       { text: "Stand up right now. Just stand.",                                     hint: "Phone down. No music. No prep. Just vertical.",                   tag: "MOVE",   xpReward: 40, stuckVersion: "Sit on the very edge of your seat" },
       { text: "Walk to where the chore lives without detouring",                     hint: "No snack stops. No “quick checks.” Ten honest steps.",     tag: "MOVE",   xpReward: 40, stuckVersion: "Take 3 steps toward the sink, desk, or mailbox." },
@@ -126,7 +126,7 @@ function getLevelProgress(xp: number) {
 
 function hexToRgb(hex: string) {
   const r = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  if (!r) return "139,92,246";
+  if (!r) return "99,102,241";
   return `${parseInt(r[1], 16)},${parseInt(r[2], 16)},${parseInt(r[3], 16)}`;
 }
 
@@ -289,7 +289,7 @@ export default function InteractiveDemo() {
           style={{ opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)", transition: "opacity .6s ease, transform .6s ease" }}
         >
           <div className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
-            style={{ color: "#22d3ee", background: "rgba(34,211,238,0.08)", border: "1px solid rgba(34,211,238,0.15)" }}>
+            style={{ color: "#A78BFA", background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)" }}>
             Interactive demo
           </div>
           <h2 className="font-bold text-white mb-4" style={{ fontSize: "clamp(32px,5vw,52px)", letterSpacing: "-0.03em" }}>
@@ -370,7 +370,7 @@ export default function InteractiveDemo() {
                       {xpFlash && (
                         <span
                           className="text-xs font-bold"
-                          style={{ color: "#4ade80", animation: "xpFloat 1.4s ease forwards" }}
+                          style={{ color: "#84CC16", animation: "xpFloat 1.4s ease forwards" }}
                         >
                           +{xpFlash}
                         </span>
@@ -423,7 +423,7 @@ export default function InteractiveDemo() {
                         <div
                           key={a.id}
                           className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium"
-                          style={{ background: "rgba(139,92,246,0.12)", border: "1px solid rgba(139,92,246,0.2)", color: "#a78bfa" }}
+                          style={{ background: "rgba(167,139,250,0.12)", border: "1px solid rgba(167,139,250,0.2)", color: "#A78BFA" }}
                           title={`${a.desc} · +${a.bonusXp} bonus XP`}
                         >
                           {a.emoji} {a.name}
@@ -445,8 +445,8 @@ export default function InteractiveDemo() {
                   className="absolute -top-16 left-1/2 z-20 flex items-center gap-3 px-4 py-2.5 rounded-2xl shadow-lg"
                   style={{
                     transform: "translateX(-50%)",
-                    background: "linear-gradient(135deg, rgba(139,92,246,0.25), rgba(79,70,229,0.25))",
-                    border: "1px solid rgba(139,92,246,0.4)",
+                    background: "linear-gradient(135deg, rgba(167,139,250,0.25), rgba(79,70,229,0.25))",
+                    border: "1px solid rgba(167,139,250,0.4)",
                     backdropFilter: "blur(12px)",
                     animation: "toastSlideIn .35s ease, toastFadeOut .4s ease 2.2s forwards",
                     whiteSpace: "nowrap",
@@ -455,7 +455,7 @@ export default function InteractiveDemo() {
                   <span className="text-xl">{activeToast.emoji}</span>
                   <div>
                     <p className="text-xs font-bold text-white leading-none">Achievement unlocked!</p>
-                    <p className="text-xs mt-0.5" style={{ color: "#a78bfa" }}>{activeToast.name} · +{activeToast.bonusXp} XP</p>
+                    <p className="text-xs mt-0.5" style={{ color: "#A78BFA" }}>{activeToast.name} · +{activeToast.bonusXp} XP</p>
                   </div>
                 </div>
               )}
@@ -465,8 +465,8 @@ export default function InteractiveDemo() {
                 className="rounded-2xl overflow-hidden"
                 style={{
                   background: "#08080f",
-                  border: "1px solid rgba(139,92,246,0.2)",
-                  boxShadow: "0 30px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(139,92,246,0.05)",
+                  border: "1px solid rgba(167,139,250,0.2)",
+                  boxShadow: "0 30px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(167,139,250,0.05)",
                 }}
               >
                 {/* Title bar */}
@@ -505,9 +505,9 @@ export default function InteractiveDemo() {
         @keyframes toastSlideIn { from { opacity:0; transform:translateX(-50%) translateY(-10px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
         @keyframes toastFadeOut { to { opacity:0; transform:translateX(-50%) translateY(-6px); } }
         @keyframes xpFloat { 0% { opacity:1; transform:translateY(0); } 60% { opacity:1; transform:translateY(-10px); } 100% { opacity:0; transform:translateY(-18px); } }
-        @keyframes levelUpPulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.08); box-shadow:0 0 20px rgba(251,191,36,0.5); } }
+        @keyframes levelUpPulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.08); box-shadow:0 0 20px rgba(132,204,22,0.45); } }
         @keyframes stepIn { from { opacity:0; transform:translateX(8px); } to { opacity:1; transform:none; } }
-        @keyframes doneFlash { 0%,100% { background:linear-gradient(135deg,#7c3aed,#4f46e5); } 50% { background:linear-gradient(135deg,#4ade80,#16a34a); } }
+        @keyframes doneFlash { 0%,100% { background:linear-gradient(135deg,#6366F1,#4f46e5); } 50% { background:linear-gradient(135deg,#84CC16,#65a30d); } }
       `}</style>
     </section>
   );
@@ -538,7 +538,7 @@ function StartScreen({ scenario, onStart }: { scenario: Scenario; onStart: () =>
       <button
         onClick={onStart}
         className="w-full py-3.5 rounded-xl text-sm font-semibold text-white cursor-pointer transition-all duration-200"
-        style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}
+        style={{ background: "linear-gradient(135deg,#6366F1,#4f46e5)" }}
         onMouseEnter={e => (e.currentTarget.style.opacity = "0.88")}
         onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
       >
@@ -563,10 +563,10 @@ function StepScreen({
       <div className="flex items-center gap-2 mb-5">
         {scenario.steps.map((_, i) => (
           <div key={i} className="h-1 rounded-full transition-all duration-500 flex-1"
-            style={{ background: i < stepIdx ? "linear-gradient(90deg,#7c3aed,#4f46e5)" : i === stepIdx ? "rgba(139,92,246,0.5)" : "rgba(255,255,255,0.07)" }} />
+            style={{ background: i < stepIdx ? "linear-gradient(90deg,#6366F1,#4f46e5)" : i === stepIdx ? "rgba(167,139,250,0.5)" : "rgba(255,255,255,0.07)" }} />
         ))}
         {completedCount > 0 && (
-          <span className="ml-1 text-xs font-medium whitespace-nowrap" style={{ color: "#4ade80" }}>
+          <span className="ml-1 text-xs font-medium whitespace-nowrap" style={{ color: "#84CC16" }}>
             ✓ {completedCount}
           </span>
         )}
@@ -594,7 +594,7 @@ function StepScreen({
 
       {/* Motivational message */}
       {stepIdx > 0 && MOTIVATIONAL[stepIdx] && !stuckMode && (
-        <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg text-xs" style={{ background: "rgba(139,92,246,0.08)", color: "#a78bfa" }}>
+        <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg text-xs" style={{ background: "rgba(167,139,250,0.08)", color: "#A78BFA" }}>
           <span>✦</span>
           <span>{MOTIVATIONAL[stepIdx]}</span>
         </div>
@@ -620,7 +620,7 @@ function StepScreen({
         <button
           onClick={onDone}
           className="flex-1 py-3 rounded-xl text-sm font-bold text-white cursor-pointer transition-all duration-200"
-          style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}
+          style={{ background: "linear-gradient(135deg,#6366F1,#4f46e5)" }}
           onMouseEnter={e => { e.currentTarget.style.opacity = "0.88"; e.currentTarget.style.transform = "scale(1.01)"; }}
           onMouseLeave={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "scale(1)"; }}
         >
@@ -664,11 +664,11 @@ function FinishedScreen({ xp, levelIdx, earned, onReset }: { xp: number; levelId
           </p>
           <div className="grid grid-cols-2 gap-2">
             {earnedList.map(a => (
-              <div key={a.id} className="flex items-center gap-2 px-3 py-2 rounded-xl" style={{ background: "rgba(139,92,246,0.08)", border: "1px solid rgba(139,92,246,0.18)" }}>
+              <div key={a.id} className="flex items-center gap-2 px-3 py-2 rounded-xl" style={{ background: "rgba(167,139,250,0.08)", border: "1px solid rgba(167,139,250,0.18)" }}>
                 <span className="text-lg">{a.emoji}</span>
                 <div>
                   <p className="text-xs font-semibold text-white">{a.name}</p>
-                  <p className="text-xs" style={{ color: "#a78bfa" }}>+{a.bonusXp} XP</p>
+                  <p className="text-xs" style={{ color: "#A78BFA" }}>+{a.bonusXp} XP</p>
                 </div>
               </div>
             ))}
@@ -683,9 +683,9 @@ function FinishedScreen({ xp, levelIdx, earned, onReset }: { xp: number; levelId
       <button
         onClick={onReset}
         className="w-full py-2.5 rounded-xl text-sm font-medium cursor-pointer transition-all"
-        style={{ background: "rgba(139,92,246,0.1)", border: "1px solid rgba(139,92,246,0.2)", color: "#a78bfa" }}
-        onMouseEnter={e => (e.currentTarget.style.background = "rgba(139,92,246,0.18)")}
-        onMouseLeave={e => (e.currentTarget.style.background = "rgba(139,92,246,0.1)")}
+        style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", color: "#A78BFA" }}
+        onMouseEnter={e => (e.currentTarget.style.background = "rgba(167,139,250,0.18)")}
+        onMouseLeave={e => (e.currentTarget.style.background = "rgba(167,139,250,0.1)")}
       >
         Try another scenario ↺
       </button>
