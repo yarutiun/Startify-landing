@@ -82,17 +82,16 @@ export default function Gamification() {
             className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full"
             style={{ color: "#fb923c", background: "rgba(249,115,22,0.08)", border: "1px solid rgba(249,115,22,0.18)" }}
           >
-            Gamification
+            Rewards that respect ADHD wiring
           </div>
           <h2 className="font-bold text-white mb-4" style={{ fontSize: "clamp(32px,5vw,52px)", letterSpacing: "-0.03em" }}>
-            Finishing tasks becomes{" "}
+            Finishing micro-steps becomes{" "}
             <span style={{ background: "linear-gradient(135deg,#fb923c,#f472b6,#a78bfa)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              addictive
+              satisfying
             </span>
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
-            Startify uses a proven reward loop to make execution feel irresistible.
-            You won&rsquo;t just want to start tasks — you&rsquo;ll want to finish them.
+            XP, streaks, and badges borrow the dopamine hits your brain already chases—then point them at laundry, email, study sessions, or life admin instead of shame spirals.
           </p>
         </div>
 

@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { trackEvent, identifyUser } from "@/lib/amplitude";
 
 const ROTATING_GOALS = [
-  "implement authentication",
-  "finish my design",
-  "clean my room",
-  "write that email",
-  "start my assignment",
-  "build the feature",
+  "reply to that message",
+  "book the appointment",
+  "start the laundry",
+  "open the scary document",
+  "study for ten minutes",
+  "pay that bill",
 ];
 
 export default function Hero() {
@@ -97,7 +97,7 @@ export default function Hero() {
             className="w-1.5 h-1.5 rounded-full"
             style={{ background: "#a78bfa", animation: "pulse 2s infinite" }}
           />
-          Early access · Join the waitlist
+          Early access · ADHD · procrastination support
         </div>
 
         {/* Headline */}
@@ -106,13 +106,13 @@ export default function Hero() {
             className="block text-white"
             style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
           >
-            Stop overthinking.
+            Task paralysis is loud.
           </span>
           <span
             className="block gradient-text"
             style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
           >
-            Start moving.
+            Your next step can be tiny.
           </span>
         </h1>
 
@@ -126,9 +126,8 @@ export default function Hero() {
             transition: "opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s",
           }}
         >
-          Startify breaks any goal into{" "}
-          <span className="text-white font-medium">one single action</span>. Not a plan.
-          Not a list. Just the next step — right now.
+          Built for <span className="text-white font-medium">ADHD brains, chronic procrastinators, and anyone who freezes before they start</span>.
+          Startify turns overwhelm into one gentle, physical micro-action—school, work, chores, or life admin—without the shame spiral.
         </p>
 
         {/* Animated goal preview */}
@@ -265,10 +264,10 @@ function HeroStepCard() {
   const [stuckCount, setStuckCount] = useState(0);
 
   const steps = [
-    { text: "Open your laptop" },
-    { text: "Open your code editor" },
-    { text: "Create a new file called auth.js" },
-    { text: "Type the first function name" },
+    { text: "Stand up and walk to where the task lives" },
+    { text: "Set a 2-minute timer on your phone" },
+    { text: "Flip your phone face-down before the timer starts" },
+    { text: "Touch the thing you need until the timer rings" },
   ];
 
   const handleDone = () => {
@@ -341,7 +340,7 @@ function HeroStepCard() {
             fontStyle: "italic",
           }}
         >
-          &ldquo;I need to implement authentication but I feel overwhelmed&rdquo;
+          &ldquo;ADHD freeze + procrastination guilt on boring adult tasks&rdquo;
         </div>
 
         {/* Step */}
@@ -408,7 +407,7 @@ function HeroStepCard() {
               animation: "fadeIn 0.3s ease",
             }}
           >
-            That&rsquo;s okay — just move your hand toward the laptop lid.
+            That&rsquo;s okay—shrink the step: wiggle your fingers, roll shoulders once, breathe out slowly.
           </div>
         )}
 

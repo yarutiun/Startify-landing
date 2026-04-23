@@ -72,7 +72,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
         >
           <p className="text-xs italic" style={{ color: "var(--text-muted)" }}>
-            &ldquo;Reduce thinking → reduce step size → increase action frequency.&rdquo;
+            &ldquo;Smaller steps · softer shame · more honest starts.&rdquo;
           </p>
         </div>
       </div>

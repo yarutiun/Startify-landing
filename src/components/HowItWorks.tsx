@@ -7,8 +7,8 @@ const steps = [
   {
     number: "01",
     title: "Tell it your goal",
-    desc: "Type whatever is blocking you. No structure needed. Just say what you want to do — or can't get yourself to start.",
-    detail: '"I need to implement login but I keep avoiding it"',
+    desc: "Type whatever is blocking you—chores, school, paperwork, awkward messages. Messy is fine. Procrastination shame stays outside the box.",
+    detail: '"I need to deal with my inbox but ADHD freeze hits instantly"',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -18,8 +18,8 @@ const steps = [
   {
     number: "02",
     title: "Get the ONE next step",
-    desc: "No plan. No breakdown. Startify gives you exactly one action — the smallest physically possible thing to do right now.",
-    detail: "Step 1: Open your laptop",
+    desc: "No roadmap. One body-level action sized for low dopamine, high overwhelm days—so initiation doesn’t feel like a moral test.",
+    detail: "Step 1: Fill your water bottle before you sit down",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -29,8 +29,8 @@ const steps = [
   {
     number: "03",
     title: "Do it. Repeat.",
-    desc: "Click Done, get the next step. Click Stuck, it simplifies even further. The loop continues until you have momentum.",
-    detail: "Step 2 → Step 3 → Step 4 → You've started.",
+    desc: "Done → next micro-step. Stuck → it shrinks again. Keep looping until procrastination loses the arm wrestle.",
+    detail: "Step 2 → Step 3 → … → your nervous system believes you started.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 1l4 4-4 4"/>
@@ -95,11 +95,10 @@ export default function HowItWorks() {
             className="font-bold text-white mb-4"
             style={{ fontSize: "clamp(32px, 5vw, 52px)", letterSpacing: "-0.03em" }}
           >
-            Three steps to unstuck
+            Three steps out of the freeze
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
-            No setup. No onboarding. No configuration. Just type your goal and
-            Startify handles the rest.
+            No productivity cosplay. Dump the stuck, get one humane move, repeat until ADHD procrastination loses its grip.
           </p>
         </div>
 

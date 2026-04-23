@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://startify.app";
-const title = "Startify — Stop Overthinking. Start Moving.";
+const title = "Startify — Beat task paralysis. One step at a time.";
 const description =
-  "The AI execution companion that breaks any goal into one single action. No plans. No lists. Just the next step — right now. Built for developers, students, and anyone who struggles to start.";
+  "For ADHD brains, chronic procrastinators, and anyone who freezes before they start. Startify turns overwhelm into one tiny, physical next step—no guilt, no giant plans—so you can build momentum on work, school, home, or life admin.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,17 +23,18 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "productivity",
-    "task paralysis",
     "ADHD productivity",
-    "AI productivity",
-    "execution",
-    "focus",
-    "getting things done",
-    "anti procrastination",
+    "task paralysis",
+    "procrastination help",
+    "executive dysfunction",
+    "body doubling",
     "micro tasks",
-    "action",
-    "start",
+    "time blindness",
+    "rejection sensitive",
+    "getting unstuck",
+    "overwhelm",
+    "starting tasks",
+    "focus",
     "momentum",
   ],
   authors: [{ name: "Startify" }],
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Startify — AI execution companion",
+        alt: "Startify — ADHD-friendly help for procrastination and task paralysis",
       },
     ],
   },

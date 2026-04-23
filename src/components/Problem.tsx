@@ -8,7 +8,7 @@ const problems = [
     emoji: "🔁",
     title: "You open 12 tabs.",
     subtitle: "Then close all 12.",
-    body: "You research the task, read about approaches, watch a video, check Reddit — and still haven't done anything.",
+    body: "You research the task, fall down ADHD rabbit holes, refresh feeds, and still haven’t crossed the scary starting line.",
     color: "#f59e0b",
     bg: "rgba(245,158,11,0.06)",
     border: "rgba(245,158,11,0.15)",
@@ -17,7 +17,7 @@ const problems = [
     emoji: "📋",
     title: "You write the perfect plan.",
     subtitle: "Then ignore it.",
-    body: "The plan is beautiful. Color-coded. Prioritized. You're proud of it. Then you do nothing from it for a week.",
+    body: "The plan is gorgeous—executive function loves organizing—yet the first physical move still feels impossible for days.",
     color: "#ec4899",
     bg: "rgba(236,72,153,0.06)",
     border: "rgba(236,72,153,0.15)",
@@ -26,7 +26,7 @@ const problems = [
     emoji: "⏳",
     title: "\"Tomorrow I'll actually start.\"",
     subtitle: "You've said this 47 times.",
-    body: "The task never gets smaller by waiting. It just gets heavier. The longer you avoid it, the harder starting feels.",
+    body: "Procrastination shame piles on top of the task. Waiting doesn’t shrink it—it makes the freeze louder, especially if ADHD anxiety tags along.",
     color: "#8b5cf6",
     bg: "rgba(139,92,246,0.06)",
     border: "rgba(139,92,246,0.15)",
@@ -82,15 +82,15 @@ export default function Problem() {
             className="font-bold mb-4"
             style={{ fontSize: "clamp(32px, 5vw, 52px)", letterSpacing: "-0.03em" }}
           >
-            You know exactly what to do.
+            You are not failing—you&apos;re frozen.
             <br />
             <span style={{ color: "var(--text-secondary)" }}>
-              You just can&rsquo;t start.
+              Task initiation is the bottleneck.
             </span>
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
-            It&rsquo;s not laziness. It&rsquo;s not lack of discipline. Your brain is just stuck
-            in planning mode — and no productivity app fixes that.
+            ADHD, burnout, anxiety-procrastination loops, and plain overwhelm all show up as the same wall: the gap before the first tiny move.
+            Startify lives in that gap—not in another color-coded calendar.
           </p>
         </div>
 
@@ -153,9 +153,9 @@ export default function Problem() {
               style={{ background: "#8b5cf6", animation: "pulse 2s infinite" }}
             />
             <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-              The problem isn&rsquo;t knowledge.{" "}
+              The problem isn&rsquo;t caring.{" "}
               <span className="text-white font-medium">
-                It&rsquo;s the moment of starting.
+                It&rsquo;s procrastination + executive dysfunction at the start line.
               </span>
             </p>
           </div>

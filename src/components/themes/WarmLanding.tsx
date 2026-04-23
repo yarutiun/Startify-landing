@@ -87,17 +87,17 @@ function WarmHero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8" style={{ background: "rgba(232,87,42,0.1)", border: "1px solid rgba(232,87,42,0.2)", color: "#c43d0d" }}>
           <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#e8572a" }} />
-          Early access — join the waitlist
+          Early access · ADHD · procrastination support
         </div>
 
         <h1 className="font-bold mb-6" style={{ fontSize: "clamp(44px,7vw,88px)", letterSpacing: "-0.04em", lineHeight: 1, color: "#1a1208" }}>
-          You know what<br />
-          <span style={{ color: "#e8572a" }}>to do.</span><br />
-          <span style={{ color: "#78350f", opacity: 0.7 }}>So why can't you start?</span>
+          Task paralysis<br />
+          <span style={{ color: "#e8572a" }}>isn&apos;t a character flaw.</span><br />
+          <span style={{ color: "#78350f", opacity: 0.7 }}>It&apos;s a stuck nervous system.</span>
         </h1>
 
         <p className="text-lg md:text-xl mb-10 max-w-xl mx-auto" style={{ color: "#78350f", lineHeight: 1.7 }}>
-          Startify gives you <strong style={{ color: "#1a1208" }}>one single action</strong> — the smallest possible step you can take right now. No plans. Just movement.
+          Startify is for <strong style={{ color: "#1a1208" }}>anyone whose brain hits a wall before their hands move</strong>—ADHD, anxiety-procrastination mashups, burnout, or plain overwhelm. You get <strong style={{ color: "#1a1208" }}>one kind, body-level next step</strong>. No 12-tab plan. No guilt trip.
         </p>
 
         {!submitted ? (
@@ -136,7 +136,7 @@ function WarmHero() {
 
 function WarmStepCard() {
   const [step, setStep] = useState(0);
-  const steps = ["Open your laptop", "Open your code editor", "Create a new file", "Write the first function"];
+  const steps = ["Walk to where the task lives", "Set a 2-minute timer", "Silence one distraction", "Touch the tool you need once"];
   return (
     <div className="w-full max-w-xs text-left rounded-2xl p-6 shadow-xl" style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.12)", boxShadow: "0 20px 60px rgba(120,53,15,0.12)" }}>
       <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: "1px solid rgba(120,53,15,0.08)" }}>
@@ -147,7 +147,7 @@ function WarmStepCard() {
         </div>
       </div>
       <p className="text-xs mb-3" style={{ color: "#78350f", fontStyle: "italic" }}>
-        &ldquo;Implement authentication but overwhelmed&rdquo;
+        &ldquo;Executive dysfunction + procrastination on boring adult stuff&rdquo;
       </p>
       <p className="text-xs font-bold mb-1" style={{ color: "#e8572a" }}>Step {step + 1}</p>
       <p className="text-base font-bold mb-4" style={{ color: "#1a1208", lineHeight: 1.4 }}>{steps[step]}</p>
@@ -169,14 +169,14 @@ function WarmProblem() {
         <div className="max-w-xl mb-12">
           <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#e8572a" }}>Sound familiar?</p>
           <h2 className="font-bold mb-4" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>
-            Your brain knows what to do.<br /><span style={{ color: "#78350f" }}>Your hands just won&rsquo;t start.</span>
+            You care about the outcome.<br /><span style={{ color: "#78350f" }}>Procrastination still hijacks the start.</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { emoji: "🌀", title: "The research spiral", body: "Open 12 tabs. Read everything. Do nothing. It's not laziness — your brain is just stuck in preparation mode.", color: "#e8572a" },
-            { emoji: "📋", title: "The perfect plan", body: "You make a beautiful plan. Color-coded. Prioritized. Then you ignore it for a week because starting still feels hard.", color: "#f59e0b" },
-            { emoji: "⏳", title: "\"Tomorrow, I'll start\"", body: "You've told yourself this 47 times. The task doesn't get lighter. It just gets heavier the longer you wait.", color: "#78350f" },
+            { emoji: "🌀", title: "Hyperfocus on the wrong thing", body: "You “research” the task until you’re exhausted. Classic ADHD time warp—not a discipline problem.", color: "#e8572a" },
+            { emoji: "📋", title: "Planning as procrastination", body: "Color-coded calendars feel productive while the scary first step stays untouched. Executive function says nope.", color: "#f59e0b" },
+            { emoji: "⏳", title: "Shame-fueled delay", body: "Every “I’ll start tomorrow” adds weight. The freeze gets louder. You’re not broken—your brain needs a smaller lever.", color: "#78350f" },
           ].map((p, i) => (
             <div key={i} className="rounded-2xl p-6" style={{ background: "white", border: "1.5px solid rgba(120,53,15,0.08)", boxShadow: "0 2px 20px rgba(120,53,15,0.05)" }}>
               <div className="text-3xl mb-3">{p.emoji}</div>
@@ -198,14 +198,14 @@ function WarmHowItWorks() {
     <section className="py-20 px-6" style={{ background: "#faf6f1", borderTop: "1px solid rgba(120,53,15,0.08)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-xl mx-auto mb-14">
-          <h2 className="font-bold mb-3" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>Three steps. That&rsquo;s all.</h2>
-          <p style={{ color: "#78350f", lineHeight: 1.7 }}>No setup. No onboarding. No method selection. Just type your goal and start moving.</p>
+          <h2 className="font-bold mb-3" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>Three gentle beats. That&rsquo;s all.</h2>
+          <p style={{ color: "#78350f", lineHeight: 1.7 }}>No productivity cosplay. Dump the stuck, get one humane micro-step, repeat until momentum sneaks back.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { n: "1", title: "Tell it your goal", desc: "Just type what you want to do or can't get started on. No structure required.", ex: '"I need to implement login but I keep putting it off"' },
-            { n: "2", title: "Get ONE next step", desc: "Not a plan. Not a breakdown. One single physical action you can do right now.", ex: "Step 1: Open VS Code in your project folder" },
-            { n: "3", title: "Do it. Repeat.", desc: "Click Done → next step. Click Stuck → it simplifies. Keep going until you have momentum.", ex: "Step 2 → Step 3 → … → You've started." },
+            { n: "1", title: "Tell it your goal", desc: "Messy sentences welcome—chores, school, paperwork, awkward messages. Shame-free venting counts as data.", ex: '"I need to answer emails but ADHD freeze hits instantly"' },
+            { n: "2", title: "Get ONE next step", desc: "Not a roadmap. One physical action sized for low dopamine, high overwhelm days.", ex: "Step 1: Walk to your desk with water already filled" },
+            { n: "3", title: "Do it. Repeat.", desc: "Done → celebrate + next micro-step. Stuck → it shrinks again until your body says okay.", ex: "Step 2 → Step 3 → … → the task finally feels real." },
           ].map((s, i) => (
             <div key={i} className="relative">
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-black mb-4" style={{ background: "#e8572a", color: "white" }}>{s.n}</div>
@@ -231,11 +231,11 @@ function WarmDemo() {
   const [toast, setToast] = useState<string | null>(null);
 
   const steps = [
-    { text: "Open VS Code in your project folder", hint: "Editor first. No research yet.", tag: "SETUP", xp: 50 },
-    { text: "Open terminal → npm install jsonwebtoken", hint: "One command. Done.", tag: "INSTALL", xp: 50 },
-    { text: "Create: src/middleware/auth.js", hint: "Empty is fine. It just needs to exist.", tag: "CREATE", xp: 50 },
-    { text: "Type: const jwt = require('jsonwebtoken')", hint: "One import. You've started the implementation.", tag: "CODE", xp: 55 },
-    { text: "Write: function verifyToken(token) { return null }", hint: "Skeleton. Foundation laid.", tag: "CODE", xp: 55 },
+    { text: "Stand up and walk to where you’ll work", hint: "Body relocation beats arguing with your brain.", tag: "MOVE", xp: 50 },
+    { text: "Set a 2-minute timer + flip phone face-down", hint: "Two minutes. One fewer dopamine trap.", tag: "FOCUS", xp: 50 },
+    { text: "Say the task out loud in one messy sentence", hint: "Swearing optional. Vocal cords = progress.", tag: "NAME", xp: 50 },
+    { text: "Touch the object the task needs (keys, sponge, laptop lid)", hint: "Contact only. No output yet.", tag: "TOUCH", xp: 55 },
+    { text: "Until the timer rings, do the tiniest visible piece", hint: "One line, one dish, one checkbox—then you can stop.", tag: "DO", xp: 55 },
   ];
 
   const showToast = (msg: string) => {
@@ -256,8 +256,8 @@ function WarmDemo() {
     <section className="py-20 px-6" style={{ background: "white", borderTop: "1px solid rgba(120,53,15,0.08)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-xl mx-auto mb-12">
-          <h2 className="font-bold mb-3" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>Try it yourself</h2>
-          <p style={{ color: "#78350f" }}>Click through the steps. Watch your XP and streak build in real time.</p>
+          <h2 className="font-bold mb-3" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>Try the procrastination drill</h2>
+          <p style={{ color: "#78350f" }}>Same micro-win energy for laundry, email, studying, or “boring adult” tasks—watch XP and streaks climb without shame.</p>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 items-start max-w-3xl mx-auto">
           {/* App window */}
@@ -273,9 +273,9 @@ function WarmDemo() {
                 <div>
                   <p className="text-xs mb-2 font-medium" style={{ color: "#78350f" }}>Your goal</p>
                   <div className="px-4 py-3 rounded-xl text-sm mb-5" style={{ background: "#faf6f1", border: "1px solid rgba(120,53,15,0.1)", color: "#1a1208" }}>
-                    &ldquo;I need to implement authentication but I feel overwhelmed&rdquo;
+                    &ldquo;I keep procrastinating—ADHD brain, zero momentum, tons of guilt&rdquo;
                   </div>
-                  <button onClick={() => setStarted(true)} className="w-full py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>Start the execution loop →</button>
+                  <button onClick={() => setStarted(true)} className="w-full py-3.5 rounded-xl text-sm font-bold text-white cursor-pointer" style={{ background: "#e8572a" }}>Start the kindness loop →</button>
                 </div>
               ) : (
                 <div>
@@ -341,18 +341,18 @@ function WarmGamification() {
       <div className="max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#e8572a" }}>Built to be addictive</p>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#e8572a" }}>Dopamine, but pointed at real life</p>
             <h2 className="font-bold mb-4" style={{ fontSize: "clamp(28px,4vw,44px)", letterSpacing: "-0.03em", color: "#1a1208" }}>
-              Finishing tasks becomes a habit you actually <em>want</em>
+              Finishing micro-steps becomes a habit you actually <em>want</em>
             </h2>
             <p className="mb-6" style={{ color: "#78350f", lineHeight: 1.7 }}>
-              Startify uses the same reward mechanisms as your favorite games — XP, streaks, and achievement badges — but channels them into real-world execution.
+              ADHD brains crave novelty + quick wins. Startify borrows XP, streaks, and badges from games so “I moved for two minutes” hits the reward center before shame does.
             </p>
             <div className="flex flex-col gap-3">
               {[
-                { emoji: "⚡", text: "Earn XP for every step you complete" },
-                { emoji: "🔥", text: "Streaks keep you executing every day" },
-                { emoji: "🏆", text: "50+ achievement badges to unlock" },
+                { emoji: "⚡", text: "XP for every procrastination interrupt you complete" },
+                { emoji: "🔥", text: "Streaks celebrate showing up—not perfect output" },
+                { emoji: "🏆", text: "50+ badges for chores, study, admin, and self-care" },
               ].map((f, i) => (
                 <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: "white", border: "1px solid rgba(120,53,15,0.1)" }}>
                   <span className="text-xl">{f.emoji}</span>
@@ -402,10 +402,10 @@ function WarmWaitlist() {
     <section id="warm-waitlist" className="py-24 px-6 text-center" style={{ background: "#1a1208" }}>
       <div className="max-w-xl mx-auto">
         <h2 className="font-bold mb-4" style={{ fontSize: "clamp(32px,5vw,52px)", letterSpacing: "-0.04em", color: "white" }}>
-          Ready to start?
+          Want backup for ADHD procrastination loops?
         </h2>
         <p className="text-lg mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
-          Join the waitlist. We&rsquo;ll email you when Startify is ready.
+          Join the waitlist—we&rsquo;ll email when Startify is ready for more gentle starts.
         </p>
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
@@ -436,7 +436,7 @@ function WarmFooter() {
   return (
     <footer className="py-8 px-6 text-center" style={{ background: "#1a1208", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <p className="text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-        © {new Date().getFullYear()} Startify · <em>&ldquo;Reduce thinking → reduce step size → increase action frequency.&rdquo;</em>
+        © {new Date().getFullYear()} Startify · <em>&ldquo;Smaller steps · softer shame · more honest starts.&rdquo;</em>
       </p>
     </footer>
   );

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Startify — Stop Overthinking. Start Moving.";
+export const alt = "Startify — Beat task paralysis. One step at a time.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -91,7 +91,7 @@ export default function OgImage() {
             marginBottom: "16px",
           }}
         >
-          Stop overthinking.
+          Beat task paralysis.
         </div>
         <div
           style={{
@@ -106,7 +106,7 @@ export default function OgImage() {
             color: "transparent",
           }}
         >
-          Start moving.
+          One step at a time.
         </div>
 
         {/* Subtext */}
@@ -119,8 +119,8 @@ export default function OgImage() {
             lineHeight: 1.5,
           }}
         >
-          The AI execution companion that breaks any goal into one single
-          action. Right now.
+          ADHD-aware support for procrastination and overwhelm—one tiny action
+          you can do with your body, right now.
         </div>
 
         {/* Step card preview */}
@@ -142,7 +142,7 @@ export default function OgImage() {
             Step 1
           </div>
           <div style={{ fontSize: "18px", color: "white", fontWeight: 600 }}>
-            Open your laptop
+            Stand up and walk to the space
           </div>
           <div style={{ display: "flex", gap: "8px", marginTop: "4px" }}>
             <div

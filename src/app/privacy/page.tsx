@@ -53,7 +53,7 @@ export default function PrivacyPage() {
         <div className="flex flex-col gap-10">
 
           <Section title="Who we are">
-            <p>Startify is an AI execution companion built to help you break any goal into a single, immediate action. This site is operated by an individual founder reachable at <A href={`mailto:${email}`}>{email}</A>.</p>
+            <p>Startify is an AI companion focused on task paralysis, procrastination, and ADHD-style initiation struggles—it helps you turn stuck goals into one small, immediate action. This site is operated by an individual founder reachable at <A href={`mailto:${email}`}>{email}</A>.</p>
           </Section>
 
           <Section title="What data we collect">

@@ -36,7 +36,7 @@ export default function SocialProof() {
         <div className="text-center sm:text-left">
           <span className="font-semibold text-white">2,400+ people</span>
           <span style={{ color: "var(--text-secondary)" }}>
-            {" "}are fighting task paralysis — join them
+            {" "}are done letting procrastination drive—join them
           </span>
         </div>
         <div
@@ -46,7 +46,7 @@ export default function SocialProof() {
         <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-secondary)" }}>
           <span className="flex items-center gap-1.5">
             <span className="text-yellow-400">★★★★★</span>
-            <span>Loved by devs & students</span>
+            <span>Loved by ADHDers and chronic procrastinators</span>
           </span>
         </div>
       </div>

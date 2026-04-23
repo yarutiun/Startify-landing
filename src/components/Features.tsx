@@ -11,7 +11,7 @@ const features = [
       </svg>
     ),
     title: "Instant micro-actions",
-    desc: "Every step is physically executable in under 3 minutes. No vague advice, no abstract goals.",
+    desc: "Every step is body-level and finishable in minutes—built for ADHD time blindness and “I’ll do it later” loops.",
     color: "#8b5cf6",
   },
   {
@@ -22,7 +22,7 @@ const features = [
       </svg>
     ),
     title: "Zero decision fatigue",
-    desc: 'One step is shown at a time. Your brain only has one question to answer: "Can I do this right now?"',
+    desc: "One step on screen at a time so working memory isn’t juggling a whole project—just “can my body do this micro-move now?”",
     color: "#22d3ee",
   },
   {
@@ -32,7 +32,7 @@ const features = [
       </svg>
     ),
     title: "Adaptive simplification",
-    desc: 'Clicked "I\'m stuck"? The AI breaks it down even further. Steps never feel impossible.',
+    desc: "Tap “I’m stuck” and the step shrinks again—perfect for shame spirals when even small tasks feel huge.",
     color: "#f59e0b",
   },
   {
@@ -43,7 +43,7 @@ const features = [
       </svg>
     ),
     title: "Momentum tracking",
-    desc: "Every completed step is counted. See how many actions you've taken today — the number motivates.",
+    desc: "Every completed micro-win is counted so dopamine hits come from progress, not from doomscrolling.",
     color: "#4ade80",
   },
   {
@@ -53,7 +53,7 @@ const features = [
       </svg>
     ),
     title: "Works for anything",
-    desc: "Code, study, admin, creative work, exercise — any goal with any level of complexity.",
+    desc: "Chores, school, paperwork, health habits, creative projects—anything procrastination or ADHD initiation blocks.",
     color: "#ec4899",
   },
   {
@@ -64,7 +64,7 @@ const features = [
       </svg>
     ),
     title: "No onboarding required",
-    desc: "Open the app, type your goal, start moving. No setup, no account complexity, no learning curve.",
+    desc: "Open the app, brain-dump the stuck, get one next step. No productivity theater standing between you and motion.",
     color: "#818cf8",
   },
 ];
@@ -120,11 +120,10 @@ export default function Features() {
             className="font-bold text-white mb-4"
             style={{ fontSize: "clamp(32px, 5vw, 52px)", letterSpacing: "-0.03em" }}
           >
-            Built around one principle
+            Built for brains that stall before they start
           </h2>
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>
-            Remove friction. Reduce thinking. Increase action frequency.
-            Everything in Startify serves this goal.
+            Less shame, tinier steps, more honest momentum—whether ADHD, anxiety-procrastination, or plain overwhelm is the culprit.
           </p>
         </div>
 

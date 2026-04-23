@@ -93,17 +93,17 @@ export default function Waitlist() {
           className="font-bold mb-5"
           style={{ fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "-0.04em" }}
         >
-          <span className="text-white">Ready to stop</span>
+          <span className="text-white">Ready for gentler</span>
           <br />
-          <span className="gradient-text">overthinking?</span>
+          <span className="gradient-text">starts?</span>
         </h2>
 
         <p
           className="text-lg mb-10 max-w-lg mx-auto"
           style={{ color: "var(--text-secondary)" }}
         >
-          Join the waitlist. Be first to try Startify when we launch.
-          No spam — just one email when it&rsquo;s ready.
+          Join the waitlist if ADHD task paralysis or procrastination loops run your week.
+          No spam—one email when Startify launches.
         </p>
 
         {!submitted ? (

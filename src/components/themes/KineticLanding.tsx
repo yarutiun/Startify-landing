@@ -20,7 +20,7 @@ const K = {
 const GRAD  = `linear-gradient(135deg,${K.hot},${K.purple},${K.orange})`;
 const GRAD2 = `linear-gradient(135deg,${K.purple},${K.neon})`;
 
-const TICKER_ITEMS = ["XP SYSTEM", "STREAKS", "50+ ACHIEVEMENTS", "LEVEL UP", "ADAPTIVE AI", "ZERO FRICTION", "ONE STEP AT A TIME", "MOMENTUM ENGINE"];
+const TICKER_ITEMS = ["TASK PARALYSIS", "MICRO-WINS", "STREAKS", "50+ BADGES", "ADHD-AWARE", "NO SHAME LOOPS", "EXECUTIVE FUNCTION", "MOMENTUM"];
 
 export default function KineticLanding() {
   return (
@@ -130,17 +130,17 @@ function KineticHero() {
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-8" style={{ background: `rgba(255,0,110,0.1)`, border: `1px solid rgba(255,0,110,0.3)`, color: K.hot }}>
           <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: K.hot, animation: "k-pulse 1.5s infinite" }} />
-          Early access live
+          Early access · ADHD · procrastination friendly
         </div>
 
         {/* 2-line headline */}
         <h1 style={{ fontSize: "clamp(40px,9vw,108px)", fontWeight: 900, letterSpacing: "-0.05em", lineHeight: 0.92, marginBottom: "28px" }}>
-          <span style={{ display: "block", background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>STOP THINKING.</span>
-          <span style={{ display: "block", color: K.text }}>START MOVING.</span>
+          <span style={{ display: "block", background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>YOUR BRAIN FREEZES.</span>
+          <span style={{ display: "block", color: K.text }}>WE UNFREEZE IT.</span>
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl mb-10 max-w-xl mx-auto" style={{ color: K.muted, lineHeight: 1.6 }}>
-          The AI execution system that breaks any goal into <strong style={{ color: K.text }}>one single action</strong>. No plans. No lists. <strong style={{ color: K.text }}>Just the next step — right now.</strong>
+          Startify is for <strong style={{ color: K.text }}>ADHD, procrastination, and overwhelm</strong>—not niche hobbies. It turns any stuck goal into <strong style={{ color: K.text }}>one embarrassingly small physical step</strong>. No lecture. No 12-tab plan. Just the next move your body can make.
         </p>
 
         {!submitted ? (
@@ -200,28 +200,28 @@ function formatTime(sec: number): string {
 /* ── Step card (hero) ─────────────────────────────────────────────────────── */
 const HERO_STEPS = [
   {
-    text:    "Open VS Code in your project",
-    stuck:   "Press ⌘+Space (Mac) or Win key (Windows), type 'VS Code', hit Enter. Don't open any file yet — just launch the app. That's the whole step.",
-    time:    "~15 sec",
-    seconds: 15,
-  },
-  {
-    text:    "Run: npm install jsonwebtoken",
-    stuck:   "In VS Code, press ⌃+` to open the terminal. Click inside it. Type: npm install jsonwebtoken — then hit Enter. It'll take ~10 seconds.",
-    time:    "~30 sec",
-    seconds: 30,
-  },
-  {
-    text:    "Create src/middleware/auth.js",
-    stuck:   "In the VS Code sidebar, right-click the src folder → New Folder → name it 'middleware'. Then right-click that folder → New File → name it 'auth.js'. Leave it empty.",
+    text:    "Stand up and walk to where the task lives",
+    stuck:   "You do not have to start the task. Move your feet to the desk, kitchen counter, mailbox, or wherever this thing happens. Sit or stand there. That counts.",
     time:    "~20 sec",
     seconds: 20,
   },
   {
-    text:    "Type: const jwt = require('jsonwebtoken')",
-    stuck:   "Click inside the auth.js file. You're on line 1. Type exactly: const jwt = require('jsonwebtoken') — you can copy-paste. Don't worry what it means yet.",
-    time:    "~10 sec",
-    seconds: 10,
+    text:    "Set a 2-minute timer on your phone",
+    stuck:   "Open Clock (or ask your voice assistant) for two minutes. Two. You are allowed to quit when it rings.",
+    time:    "~15 sec",
+    seconds: 15,
+  },
+  {
+    text:    "Silence one distraction before the timer starts",
+    stuck:   "Pick one: flip your phone face-down, close one tab, turn one notification off, or tell someone “I’m in a 2-minute sprint.” Any single cut counts.",
+    time:    "~20 sec",
+    seconds: 20,
+  },
+  {
+    text:    "Touch the thing you’ll use once—then wait for the beep",
+    stuck:   "Examples: rest your fingers on the keyboard, open the notebook to any page, hold the sponge. No output required until the timer ends.",
+    time:    "~15 sec",
+    seconds: 15,
   },
 ];
 
@@ -311,21 +311,21 @@ function KineticStepCard() {
 /* ── Problem ─────────────────────────────────────────────────────────────── */
 function KineticProblem() {
   const cards = [
-    { n: "01", title: "The research spiral", body: "12 tabs. YouTube. Reddit. You've been preparing for hours. You haven't started.", color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
-    { n: "02", title: "The perfect plan",    body: "Beautiful task breakdown. Color-coded. Priority matrix. Ignored for a week.",         color: K.purple, shadow: "rgba(131,56,236,0.2)" },
-    { n: "03", title: "Tomorrow mindset",   body: "You've said \"tomorrow I'll start\" 47 times. It never gets lighter. Only heavier.",  color: K.orange, shadow: "rgba(251,86,7,0.2)" },
+    { n: "01", title: "The hyperfocus rabbit hole", body: "You “just need to research” until midnight. Twelve tabs, three podcasts, zero progress. Classic ADHD time warp—not laziness.", color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
+    { n: "02", title: "Planning instead of doing", body: "The Notion board is gorgeous. The calendar color-coding slaps. Your executive function still won’t hand you the starter lever.",         color: K.purple, shadow: "rgba(131,56,236,0.2)" },
+    { n: "03", title: "Shame-fueled procrastination",   body: "Every “I’ll start tomorrow” adds weight. The task feels bigger, you feel worse, and the freeze gets louder. Sound familiar?",  color: K.orange, shadow: "rgba(251,86,7,0.2)" },
   ];
 
   return (
     <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" style={{ background: K.surface, borderTop: `1px solid ${K.dim}` }}>
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-10 sm:mb-12">
-          <div className="inline-block text-xs font-black uppercase tracking-widest mb-4 px-3 py-1 rounded" style={{ background: `rgba(255,0,110,0.1)`, color: K.hot }}>The problem</div>
+          <div className="inline-block text-xs font-black uppercase tracking-widest mb-4 px-3 py-1 rounded" style={{ background: `rgba(255,0,110,0.1)`, color: K.hot }}>Task paralysis is real</div>
           <h2 style={{ fontSize: "clamp(30px,5vw,60px)", fontWeight: 900, letterSpacing: "-0.04em", lineHeight: 1.05, color: K.text, marginBottom: "16px" }}>
-            YOU KNOW<br />
-            <span style={{ background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>WHAT TO DO.</span><br />
-            <span style={{ color: K.muted }}>SO WHY CAN&rsquo;T</span><br />
-            <span style={{ color: K.muted }}>YOU START?</span>
+            YOU ARE NOT<br />
+            <span style={{ background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>&ldquo;JUST LAZY.&rdquo;</span><br />
+            <span style={{ color: K.muted }}>YOUR BRAIN IS STUCK</span><br />
+            <span style={{ color: K.muted }}>IN THE GAP BEFORE START.</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -350,9 +350,9 @@ function KineticProblem() {
 /* ── How it works ─────────────────────────────────────────────────────────── */
 function KineticHowItWorks() {
   const steps = [
-    { n: "01", icon: "💬", title: "Drop your goal",   desc: "Type what you want to do. No structure needed. Just the problem in your head.",       color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
-    { n: "02", icon: "⚡", title: "Get ONE step",     desc: "Not a plan. Not a list. One immediate physical action. That's your only job.",          color: K.purple, shadow: "rgba(131,56,236,0.2)" },
-    { n: "03", icon: "🔁", title: "Execute. Repeat.", desc: "Done → next step. Stuck → it simplifies. XP and streak build with every click.",        color: K.neon,   shadow: "rgba(0,245,212,0.15)" },
+    { n: "01", icon: "💬", title: "Brain-dump the stuck",   desc: "Messy sentences welcome. Say what you’re avoiding—taxes, inbox, laundry, essay, breakup text. Shame stays outside the box.",       color: K.hot,    shadow: "rgba(255,0,110,0.2)" },
+    { n: "02", icon: "⚡", title: "Get ONE body-sized step",     desc: "No roadmap. One action a tired, overstimulated human can finish without negotiating with themselves.",          color: K.purple, shadow: "rgba(131,56,236,0.2)" },
+    { n: "03", icon: "🔁", title: "Tap Done or Stuck", desc: "Done → dopamine hit + next micro-step. Stuck → it shrinks again until it feels possible for ADHD timing.",        color: K.neon,   shadow: "rgba(0,245,212,0.15)" },
   ];
 
   return (
@@ -362,7 +362,7 @@ function KineticHowItWorks() {
           <h2 style={{ fontSize: "clamp(30px,5vw,60px)", fontWeight: 900, letterSpacing: "-0.04em", color: K.text, marginBottom: "16px" }}>
             HOW IT <span style={{ background: GRAD2, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>WORKS</span>
           </h2>
-          <p style={{ color: K.muted }}>Three steps. Zero friction. Total execution.</p>
+          <p style={{ color: K.muted }}>Three beats. Built for procrastination spirals, time blindness, and “I’ll do it later” loops.</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-5 sm:gap-6">
           {steps.map((s, i) => (
@@ -388,44 +388,44 @@ function KineticHowItWorks() {
 /* ── Demo ─────────────────────────────────────────────────────────────────── */
 const DEMO_STEPS = [
   {
-    text:    "Open VS Code in your project folder",
-    hint:    "Editor first. No Google.",
+    text:    "Stand up and walk to where you’ll do the thing",
+    hint:    "Body first. No negotiating with the task yet.",
     xp:      50,
-    stuck:   "Press ⌘+Space, type 'VS Code', hit Enter. Just opening the app counts. Don't open a file yet.",
-    time:    "~15 sec",
-    seconds: 15,
-  },
-  {
-    text:    "Open terminal → npm install jsonwebtoken",
-    hint:    "One command. Hit enter.",
-    xp:      50,
-    stuck:   "In VS Code: press ⌃+` to open the terminal. Paste: npm install jsonwebtoken. Hit Enter. Done in 10 seconds.",
-    time:    "~30 sec",
-    seconds: 30,
-  },
-  {
-    text:    "Create: src/middleware/auth.js",
-    hint:    "Empty file. It needs to exist.",
-    xp:      50,
-    stuck:   "Right-click the src folder in VS Code sidebar → New Folder → 'middleware'. Then right-click it → New File → 'auth.js'. Leave it empty.",
+    stuck:   "Literally relocate. Desk, kitchen table, car keys in hand—anywhere closer than you are now. Sitting back down is allowed.",
     time:    "~20 sec",
     seconds: 20,
   },
   {
-    text:    "Type: const jwt = require('jsonwebtoken')",
-    hint:    "One import. You've started.",
-    xp:      55,
-    stuck:   "Click inside auth.js. Line 1. Copy-paste this exactly: const jwt = require('jsonwebtoken') — that's your whole step.",
-    time:    "~10 sec",
-    seconds: 10,
+    text:    "Set a 2-minute timer and flip your phone face-down",
+    hint:    "Two minutes. Face-down = one less dopamine slot machine.",
+    xp:      50,
+    stuck:   "Open Clock → Timer → 2:00 → Start. If two feels huge, do 90 seconds. The point is a boundary your brain can trust.",
+    time:    "~15 sec",
+    seconds: 15,
   },
   {
-    text:    "Write: function verifyToken(token) { return null }",
-    hint:    "Skeleton. Foundation laid.",
+    text:    "Name the task out loud in one messy sentence",
+    hint:    "Vocal cords count as progress. Swearing optional.",
+    xp:      50,
+    stuck:   "Example: “I’m avoiding the DMV form because it feels like adult homework.” Say it, breathe, done with this step.",
+    time:    "~20 sec",
+    seconds: 20,
+  },
+  {
+    text:    "Touch the smallest object the task needs",
+    hint:    "Envelope, sponge, textbook, laptop lid—contact only.",
     xp:      55,
-    stuck:   "Below the require line, type: function verifyToken(token) { return null } — it's a placeholder. It doesn't work yet. That's fine.",
-    time:    "~25 sec",
-    seconds: 25,
+    stuck:   "No output yet. Rest your hand on it for three slow breaths. That still rewires the freeze.",
+    time:    "~15 sec",
+    seconds: 15,
+  },
+  {
+    text:    "Until the timer rings, do the tiniest visible piece",
+    hint:    "One sentence, one plate, one checkbox, one paragraph—then you can stop guilt-free.",
+    xp:      55,
+    stuck:   "If you freeze, shrink again: adjust the chair, open the doc, read the title. Progress is any motion the shame voice can’t erase.",
+    time:    "~45 sec",
+    seconds: 45,
   },
 ];
 
@@ -472,7 +472,7 @@ function KineticDemo() {
           <h2 style={{ fontSize: "clamp(30px,5vw,52px)", fontWeight: 900, letterSpacing: "-0.04em", color: K.text, marginBottom: "12px" }}>
             FEEL THE <span style={{ background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>LOOP</span>
           </h2>
-          <p style={{ color: K.muted }}>Click through. Watch the XP and streak build. Feel the pull.</p>
+          <p style={{ color: K.muted }}>Tap through a real procrastination pattern—same rewards your brain craves, pointed at laundry, email, school, or life admin.</p>
         </div>
 
         <div className="flex flex-col lg:grid lg:grid-cols-5 gap-5 sm:gap-6 max-w-4xl mx-auto">
@@ -491,7 +491,7 @@ function KineticDemo() {
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: K.muted }}>Your goal</p>
                     <div className="px-4 py-3 rounded-xl text-sm mb-5" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${K.dim}`, color: K.text, lineHeight: 1.6 }}>
-                      &ldquo;I need to implement auth but I keep putting it off&rdquo;
+                      &ldquo;I’ve been stuck on this forever—ADHD freeze + procrastination guilt loop&rdquo;
                     </div>
                     <button onClick={() => setStarted(true)} className="w-full rounded-xl text-sm font-black text-white cursor-pointer uppercase tracking-widest"
                       style={{ background: GRAD, boxShadow: `0 0 30px rgba(255,0,110,0.35)`, minHeight: "52px" }}>
@@ -506,7 +506,7 @@ function KineticDemo() {
                     <div className="rounded-xl px-4 py-3 mb-3" style={{ background: `rgba(0,245,212,0.06)`, border: `1px solid rgba(0,245,212,0.18)` }}>
                       <p className="text-xs uppercase tracking-widest font-black mb-1" style={{ color: "rgba(0,245,212,0.5)" }}>Total time</p>
                       <p className="text-2xl font-black" style={{ color: K.neon }}>{formatTime(totalSec)}</p>
-                      <p className="text-xs mt-1" style={{ color: K.muted }}>Full auth middleware started.</p>
+                      <p className="text-xs mt-1" style={{ color: K.muted }}>Proof you can interrupt paralysis without a lecture.</p>
                     </div>
                     <p className="text-xs mb-4" style={{ color: K.muted }}>{xp} XP · {streak} step streak</p>
                     <button onClick={() => { setXp(0); setStep(0); setStreak(0); setStarted(false); setCompleted(false); setStuck(false); setTotalSec(0); }}
@@ -626,7 +626,7 @@ function KineticGamification() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <div className="text-xs font-black uppercase tracking-widest mb-4 px-3 py-1.5 inline-block rounded" style={{ background: `rgba(0,245,212,0.08)`, color: K.neon }}>
-              Built for momentum
+              Built for dopamine-seeking brains
             </div>
             <h2 style={{ fontSize: "clamp(30px,5vw,56px)", fontWeight: 900, letterSpacing: "-0.04em", color: K.text, marginBottom: "16px", lineHeight: 1.0 }}>
               EVERY STEP<br />
@@ -634,14 +634,14 @@ function KineticGamification() {
               THE LAST.
             </h2>
             <p className="mb-6 text-base sm:text-lg" style={{ color: K.muted, lineHeight: 1.7 }}>
-              Small wins stack up. Streak tracking turns consistency into a habit. Achievements mark real progress milestones — the kind you can actually feel. The system is designed to make starting feel easier than stopping.
+              ADHD folks often get punished by tools built for neurotypical follow-through. Startify hijacks the same reward loops games use—XP, streaks, badges—so finishing a micro-step feels as good as doomscrolling, without the shame hangover.
             </p>
             <div className="flex flex-col gap-2.5">
               {[
-                "XP for every step completed",
-                "Streak tracking builds a daily rhythm",
-                "50+ achievement badges at key milestones",
-                "Level up: Starter → Moving → In Flow → Machine",
+                "XP every time you beat task initiation panic",
+                "Streaks for “I showed up” days—not perfect productivity theater",
+                "50+ achievements for real-life wins (inbox, chores, study, admin)",
+                "Levels that track momentum, not moral worth",
               ].map((f, i) => (
                 <div key={i} className="flex items-start gap-3 text-sm" style={{ color: K.muted }}>
                   <span style={{ color: K.neon, fontWeight: 900, flexShrink: 0, marginTop: "1px" }}>→</span>
@@ -656,12 +656,12 @@ function KineticGamification() {
               <p className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: K.muted }}>The execution loop</p>
               <div className="flex flex-col gap-1">
                 {[
-                  { icon: "💭", text: "You have a goal",         c: K.muted   },
+                  { icon: "💭", text: "Goal + shame spiral",     c: K.muted   },
                   { icon: "⚡", text: "One micro-action",        c: K.purple  },
                   { icon: "✓",  text: "Done → +XP",              c: K.neon    },
                   { icon: "🔥", text: "Streak grows",             c: "#fbbf24" },
                   { icon: "🏆", text: "Achievement unlocked",     c: K.orange  },
-                  { icon: "🚀", text: "Next step is ready",       c: K.hot     },
+                  { icon: "🚀", text: "Next step waits",          c: K.hot     },
                 ].map((s, i) => (
                   <div key={i}>
                     <div className="flex items-center gap-3 px-4 py-2.5 rounded-xl"
@@ -707,7 +707,7 @@ function KineticWaitlist() {
           <span style={{ display: "block", color: K.text }}>READY</span>
           <span style={{ display: "block", background: GRAD, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>TO GO?</span>
         </h2>
-        <p className="text-base sm:text-lg mb-8" style={{ color: K.muted }}>Get early access. One email. No spam.</p>
+        <p className="text-base sm:text-lg mb-8" style={{ color: K.muted }}>Get early access if you want backup for ADHD procrastination loops. One email. No spam.</p>
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
             <input type="email" required placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
@@ -781,7 +781,7 @@ function KineticFooter() {
       <footer className="py-8 px-4 sm:px-6" style={{ background: K.bg, borderTop: `1px solid ${K.dim}` }}>
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.2)" }}>
-            © {new Date().getFullYear()} Startify · Stop thinking. Start moving.
+            © {new Date().getFullYear()} Startify · Smaller steps. Softer shame. More starts.
           </p>
           <div className="flex items-center gap-5">
             {[{ label: "Privacy", href: "/privacy" }, { label: "Terms", href: "/terms" }].map(link => (
